@@ -2,14 +2,14 @@
 
 #include "Game.h"
 
+class Game;
+
 enum GameObjectType
 {
 	GameObjectType_None,
 
 
 };
-
-class Game;
 
 class GameObject
 {
@@ -62,12 +62,6 @@ public:
 	void setPhysical( bool physical ){ m_physical = physical; }
 	bool getPhysical(){ return m_physical; }
 
-	void setTierTop( bool tierTop ){ m_tierTop = tierTop; }
-	bool getTierTop(){ return m_tierTop; }
-
-	void setTierBottom( bool tierBottom ){ m_tierBottom = tierBottom; }
-	bool getTierBottom(){ return m_tierBottom; }
-
 	void doDamage( int damage );
 
 	void setTextureRect( sf::IntRect rect ){ m_sprite->setTextureRect( rect ); }
@@ -86,9 +80,6 @@ protected:
 	float m_xSpeed;
 	float m_ySpeed;
 
-	float m_shot;
-	float m_shotTime;
-
 	float m_width;
 	float m_height;
 	float m_wCenter;
@@ -99,8 +90,6 @@ protected:
 	bool m_invulnerable;
 
 	bool m_physical;
-	bool m_tierTop;
-	bool m_tierBottom;
 
 	int m_directionDegree;
 

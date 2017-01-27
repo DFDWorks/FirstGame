@@ -3,6 +3,9 @@
 #include "LibsAndConstants.h"
 #include "GameObject.h"
 
+enum GameObjectType;
+class GameObject;
+
 class Game
 {
 public:
@@ -19,9 +22,7 @@ public:
 	void setSoundActive( bool isActive ) { m_isSoundActive = isActive; }
 	bool getSoundActive() { return m_isSoundActive; }
 
-	Button* createButton( ButtonType type );
-	Background* createBgrndObject( BackgroundType type, float x, float y );
-	GameObject* createObject( GameObjectType type, float x, float y );
+	GameObject* createObject( GameObjectType type, float x, float y );	//Блок манипуляции обьектами
 	void destroyObject( GameObject* object );
 	GameObject* checkIntersects( float x, float y, float width, float height, GameObject* exceptObject );
 	bool moveObjectTo( GameObject* object, float x, float y );
@@ -47,16 +48,11 @@ private:
 
 	sf::RenderWindow* m_renderWindow;
 
-	Menu* m_menu;
 	bool m_isMenuActive;
-
 	bool m_isSoundActive;
 
 	GameObject* m_player;
-	GameObject* m_BaseEnemy;
 	GameObject* m_objects[MAX_OBJ];
-
-	Background* m_objectsBgnd[MAX_OBJBGRND];
 
 	int m_diedEnemiesCount;
 
@@ -64,22 +60,19 @@ private:
 	float m_offSetX;			//привязка "камеры" к обьекту
 	float m_offSetY;
 
-	
-	Button* m_buttons[MAX_BAR_BUTT];
-	int m_btn_obj;
+	int m_btn_obj;				//Различные игровые счетчики
 	int m_btn_fps;
 	int m_btn_lvl;
 	int m_btn_hpP;
 	int m_btn_hpE;
-	void textValueButton();
 
 public:	
 	sf::Vector2i mousePixelPos;	//координаты мыши
 
 
-	void setOffSets(GameObject * object);
+	void setOffSets(GameObject * object);			//привязка "камеры" к обьекту
 	float getOffSetX(){ return m_offSetX; }
 	float getOffSetY(){ return m_offSetY; }
 
-	int getAngleMouseToObject(GameObject * object);
+	int getAngleMouseToObject(GameObject * object);	//Угол мышь-обьект (для управления мишью)
 };

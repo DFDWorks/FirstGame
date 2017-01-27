@@ -1,6 +1,8 @@
 #include "LibsAndConstants.h"
 #include "GameObject.h"
 
+#include "Levels.h"
+
 GameObject::GameObject()
 {
 	m_game = NULL;
@@ -17,17 +19,12 @@ GameObject::GameObject()
 	m_invulnerable = false;
 
 	m_physical = true;
-	m_tierTop = true;
-	m_tierBottom = true;
 
 	m_directionDegree = 0;
 
 	m_sprite = new sf::Sprite();
 	m_sprite->setTexture( *TextureAtlas );
 	setTextureRect( sf::IntRect() );
-
-	m_shot = 0;
-	m_shotTime = 0.0;
 }
 
 GameObject::~GameObject()
@@ -88,24 +85,4 @@ void GameObject::doDamage( int damage )
 		m_health -= damage;
 	else
 		m_health = 0;
-}
-
-void GameObject::chengeShots( int maxCountShots, float frequency, float dt )
-{
-	float timeCh = (float)1/frequency;
-	m_shotTime += dt;
-	_reIn1:
-	if(m_shotTime >= timeCh)
-	{
-		m_shotTime -= timeCh;
-		m_shot++;
-		goto _reIn1;
-	}
-	
-	_reIn2:
-	if(m_shot >= maxCountShots)
-	{
-		m_shot -= maxCountShots;
-		goto _reIn2;
-	}
 }

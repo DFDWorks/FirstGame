@@ -1,7 +1,6 @@
 #pragma once
 
 #define MAX_OBJ 1024
-#define MAX_OBJBGRND 2048
 
 #define TILE_SIZE 64
 
