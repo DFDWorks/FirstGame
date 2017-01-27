@@ -1,0 +1,18 @@
+﻿Сборка начата 28.01.2017 0:38:14.
+     1>Проект "d:\DFD\TARAKAN\FirstGame\src\BugGame\BugGame\BugGame.vcxproj" в узле 2 (целевые объекты Build).
+     1>ClCompile:
+         D:\Progs\VisualStudio\VC\bin\CL.exe /c /I"../../SFML-2.4.1/include" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D SFML_STATIC /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
+         main.cpp
+     1>d:\dfd\tarakan\firstgame\src\buggame\buggame\gameobject.h(87): warning C4244: =: преобразование "S32" в "F32", возможна потеря данных
+     1>d:\dfd\tarakan\firstgame\src\buggame\buggame\gameobject.h(93): warning C4244: =: преобразование "S32" в "F32", возможна потеря данных
+       Link:
+         D:\Progs\VisualStudio\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\DFD\TARAKAN\FirstGame\src\BugGame\Debug\BugGame.exe" /INCREMENTAL /NOLOGO /LIBPATH:"../../SFML-2.4.1/lib" jpeg.lib opengl32.lib winmm.lib "sfml-main-d.lib" "sfml-system-s-d.lib" "sfml-window-s-d.lib" "sfml-graphics-s-d.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\DFD\TARAKAN\FirstGame\src\BugGame\Debug\BugGame.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\DFD\TARAKAN\FirstGame\src\BugGame\Debug\BugGame.lib" /MACHINE:X86 Debug\Game.obj
+         Debug\GameObject.obj
+         Debug\Improvements.obj
+         Debug\main.obj
+         BugGame.vcxproj -> D:\DFD\TARAKAN\FirstGame\src\BugGame\Debug\BugGame.exe
+     1>Сборка проекта "d:\DFD\TARAKAN\FirstGame\src\BugGame\BugGame\BugGame.vcxproj" завершена (целевые объекты Build).
+
+Сборка успешно завершена.
+
+Затраченное время: 00:00:00.79
