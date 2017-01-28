@@ -16,6 +16,7 @@
 enum GameObjectType;
 class GameObject;
 
+
 class Game
 {
 public:
@@ -57,7 +58,7 @@ public:
 	void destroyObject(GameObject* object);
 
 	////////////////////////////////////
-	GameObject* checkS32ersects(F32 x, F32 y, F32 width, F32 height, GameObject* exceptObject);
+	GameObject* checkIntersects(F32 x, F32 y, F32 width, F32 height, GameObject* exceptObject);
 
 	////////////////////////////////////
 	bool moveObjectTo(GameObject* object, F32 x, F32 y);

@@ -40,12 +40,17 @@ typedef	double D64; // double 64 bit
 							typedef std::weak_ptr< const class cls > cls##ConstWPtr;
 // Just printf but in short word
 #define Log( str, var ) printf( str, var );
+#define Log( str ) std::cout <<str;
 
 
+// To create objects
 #define CREATE( cls, init ) std::shared_ptr< cls > _object( new cls() ); \
 							if( !_object->init )     \
 								return std::shared_ptr< cls >(NULL);   \
 								return _object;
+
+// Override to debug
+#define OVERRIDE override;
 
 ////////////////////////////////////
 // Everything should be in namespace. Write all code in our namespace Bug:
@@ -54,7 +59,7 @@ namespace Bug
 {
 	// here i will show you how to use some things in C++
 
-	PTR(Improvements);
+	PTR( Improvements );
 
 	class Improvements
 	{

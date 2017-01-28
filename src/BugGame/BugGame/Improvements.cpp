@@ -15,7 +15,7 @@ namespace Bug
 
 	////////////////////////////////////
 	Improvements::Improvements()
-		: m_variable(0) // this how to initialize variables (if that need you)
+		: m_variable( 0 ) // this how to initialize variables (if that need you)
 		, m_name( "empty" )
 	{
 	}
@@ -23,6 +23,12 @@ namespace Bug
 	////////////////////////////////////
 	bool Improvements::init()
 	{
+		Log( "Hello!!!" );
+
+		m_array.push_back( 125 ); // put elements in vector like in stack
+		m_array.resize( 200 ); // or give him size and wor like with standart array
+		m_array[12] = 100;
+
 		return true;
 	}
 
@@ -35,26 +41,14 @@ namespace Bug
 	////////////////////////////////////
 	ImprovementsPtr Improvements::Create()
 	{
-		CREATE(Improvements, init());
+		CREATE( Improvements, init() );
 	}
 
 	////////////////////////////////////
-	void Improvements::setName(const STR& name)
+	void Improvements::setName( const STR& name )
 	{
 		m_name = name;
 	}
-
-	//////////////////////////////////////
-	//SettingsMiniGamePtr SettingsMiniGame::Create()
-	//{
-	//	BFG_CREATE_AND_INIT_SHARED_PTR(SettingsMiniGame, init());
-	//}
-	//
-	//////////////////////////////////////
-	//SettingsMiniGamePtr SettingsMiniGame::Create(const SettingsMiniGamePtr& obj)
-	//{
-	//	BFG_CREATE_AND_INIT_SHARED_PTR(SettingsMiniGame, init(obj));
-	//}
 
 
 }

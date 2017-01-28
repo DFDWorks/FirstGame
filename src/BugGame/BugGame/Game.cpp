@@ -202,7 +202,7 @@ void Game::update(F32 dt)
 }
 
 ////////////////////////////////////
-GameObject* Game::checkS32ersects(F32 x, F32 y, F32 width, F32 height, GameObject* exceptObject)
+GameObject* Game::checkIntersects(F32 x, F32 y, F32 width, F32 height, GameObject* exceptObject)
 {
 	F32 passing = 1.4;
 
@@ -264,7 +264,7 @@ S32 Game::getObjectsCount(GameObjectType type)
 ////////////////////////////////////
 GameObject* Game::createObject(GameObjectType type, F32 x, F32 y)
 {
-	// Find free poS32er and create object
+	// Find free pointer and create object
 	for (S32 i = 0; i < MAX_OBJ; i++)
 	{
 		if (m_objects[i] == NULL)
