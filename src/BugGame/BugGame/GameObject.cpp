@@ -1,9 +1,9 @@
 ////////////////////////////////////
 // GameObject
 //
-// Author: Triold
+// Author: TRiOLD
 //
-// **.01.17
+// 29.01.17
 ////////////////////////////////////
 
 
@@ -33,11 +33,13 @@ GameObject::GameObject()
 
 	m_physical = true;
 
-	m_directionDegree = 0;
+	m_rotationSpeed = 0.0;
+	m_directionFormally = 0;
+	m_directionReal = 0.0;
+	m_sideOfRotation = 1;
 
 	m_sprite = new sf::Sprite();
 	m_sprite->setTexture(*TextureAtlas);
-	setTextureRect(sf::IntRect());
 }
 
 ////////////////////////////////////
@@ -52,8 +54,8 @@ void GameObject::render(sf::RenderWindow* rw)
 {
 	if (m_sprite)
 	{
-		F32 xSprite = (F32)getWidth() * getWCenter();
-		F32 ySprite = (F32)getHeight() * getHCenter();
+		F32 xSprite = getWCenter();
+		F32 ySprite = getHCenter();
 		F32 column = m_x - m_game->getOffSetX();
 		F32 row = m_y - m_game->getOffSetY();
 
@@ -105,3 +107,40 @@ void GameObject::doDamage(S32 damage)
 		m_health = 0;
 }
 
+////////////////////////////////////
+bool GameObject::rotation(F32 deltaTime)
+{
+	if(m_rotationSpeed == 0)
+	{
+		m_directionReal = m_directionFormally;
+		return false;
+	}
+
+	S32 difference = m_directionFormally - m_directionReal;
+	if(difference == 0)
+	{
+		m_sideOfRotation = 1;
+		return false;		
+	}
+	
+	if(difference < 0)	difference += 360;
+	
+	if(difference < 180)
+		m_sideOfRotation =  1;
+	else
+		m_sideOfRotation = -1;
+	
+	F32 deltaAngle = deltaTime * m_rotationSpeed * 360;
+	m_directionReal += deltaAngle * m_sideOfRotation;
+
+	if(m_directionReal < 0)		m_directionReal += 360;
+	if(m_directionReal >= 360)	m_directionReal -= 360;
+
+//	if((m_sideOfRotation == 1 && m_directionReal > m_directionFormally)
+//		|| (m_sideOfRotation == -1 && m_directionReal > m_directionFormally))
+//		m_directionReal = m_directionFormally;
+
+
+	printf("%i, %f, %i, %f\n",m_directionFormally, m_directionReal, difference, deltaAngle);
+	return true;
+}

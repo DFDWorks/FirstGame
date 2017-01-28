@@ -1,9 +1,9 @@
 ////////////////////////////////////
 // GameObject
 //
-// Author: Triold
+// Author: TRiOLD
 //
-// **.01.17
+// 29.01.17
 ////////////////////////////////////
 #pragma once
 
@@ -126,13 +126,13 @@ public:
 	void setTextureRect(sf::IntRect rect){ m_sprite->setTextureRect(rect); }
 
 	////////////////////////////////////
-	void setDirectionDegree(S32 directionDegree){ m_directionDegree = directionDegree; }
+	void setDirectionDegree(S32 directionDegree){ m_directionFormally = directionDegree; }
 
 	////////////////////////////////////
-	S32 getDirectionDegree(){ return m_directionDegree; }
+	S32 getDirectionDegree(){ return m_directionFormally; }
 
 	////////////////////////////////////
-	void chengeShots(S32 maxCountShots, F32 frequency, F32 dt);
+	bool rotation(F32 deltaTime);
 
 protected:
 	Game* m_game;
@@ -153,8 +153,11 @@ protected:
 	bool m_invulnerable;
 
 	bool m_physical;
-
-	S32 m_directionDegree;
+	
+	F32 m_rotationSpeed;			// One revolution per second
+	S32 m_directionFormally;		// The value of which operate
+	F32 m_directionReal;			// Values displayed. Approaching to formally
+	S32 m_sideOfRotation;			// 1 - clockwise, -1 - anticlockwise
 
 	sf::Sprite* m_sprite;
 };

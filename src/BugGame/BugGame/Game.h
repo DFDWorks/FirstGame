@@ -1,9 +1,9 @@
 ////////////////////////////////////
 // Game
 //
-// Author: Triold
+// Author: TRiOLD
 //
-// **.01.17
+// 29.01.17
 ////////////////////////////////////
 
 #pragma once
@@ -52,7 +52,7 @@ public:
 	bool getSoundActive() { return m_isSoundActive; }
 
 	////////////////////////////////////
-	GameObject* createObject(GameObjectType type, F32 x, F32 y);	//Блок манипуляции обьектами
+	GameObject* createObject(GameObjectType type, F32 x, F32 y);
 
 	////////////////////////////////////
 	void destroyObject(GameObject* object);
@@ -87,8 +87,6 @@ private:
 	void update(F32 dt);
 
 private:
-
-
 	bool m_isGameActive;
 	S32 m_levelNumber;
 
@@ -107,22 +105,22 @@ private:
 	S32 m_diedEnemiesCount;
 
 private:
-	F32 m_offSetX;			//привязка "камеры" к обьекту
+	F32 m_offSetX;
 	F32 m_offSetY;
 
-	S32 m_btn_obj;				//Различные игровые счетчики
+	S32 m_btn_obj;
 	S32 m_btn_fps;
 	S32 m_btn_lvl;
 	S32 m_btn_hpP;
 	S32 m_btn_hpE;
 
 public:
-	sf::Vector2i mousePixelPos;	//координаты мыши
+	sf::Vector2i mousePixelPos;
 
 
-	void setOffSets(GameObject * object);			//привязка "камеры" к обьекту
+	void setOffSets(GameObject * object);
 	F32 getOffSetX(){ return m_offSetX; }
 	F32 getOffSetY(){ return m_offSetY; }
 
-	S32 getAngleMouseToObject(GameObject * object);	//Угол мышь-обьект (для управления мишью)
+	S32 getAngleMouseToObject(GameObject * object);
 };

@@ -1,9 +1,9 @@
 ////////////////////////////////////
 // Game
 //
-// Author: Triold
+// Author: TRiOLD
 //
-// **.01.17
+// 29.01.17
 ////////////////////////////////////
 
 ////////////////////////////////////
@@ -13,10 +13,10 @@
 #include "Improvements.h"
 #include "Levels.h"
 
-	
+#include "GO_Cockroach.h"	
 
 
-sf::Texture* TextureAtlas = NULL;
+sf::Texture* TextureAtlas;
 
 ////////////////////////////////////
 Game::Game()
@@ -62,7 +62,7 @@ void Game::setupSystem()
 		sf::Style::Titlebar | sf::Style::Close);
 
 	TextureAtlas = new sf::Texture();
-	TextureAtlas->loadFromFile("bug.png");
+	TextureAtlas->loadFromFile("atlas00.png");
 }
 
 ////////////////////////////////////
@@ -97,6 +97,9 @@ void Game::initialize()
 			}
 		}
 	}
+
+	m_player = new Cockroach();
+	m_player->setGame(this);
 }
 
 ////////////////////////////////////
@@ -156,7 +159,7 @@ void Game::shutdown()
 void Game::render()
 {
 	// Start frame
-	m_renderWindow->clear(sf::Color::Black);
+	m_renderWindow->clear(sf::Color::White);
 
 	// Deaw all game objects
 
@@ -167,6 +170,8 @@ void Game::render()
 			m_objects[i]->render(m_renderWindow);
 			m_btn_obj++;
 		}
+
+	m_player->render(m_renderWindow);
 
 	// End frame
 	m_renderWindow->display();
@@ -198,7 +203,7 @@ void Game::update(F32 dt)
 			initialize();
 	}
 
-	//	prS32f("%f, %f, %f, %f\n",F32(mousePixelPos.x), F32(mousePixelPos.y), m_offSetX*TILE_SIZE, m_offSetY*TILE_SIZE);
+	m_player->update(dt);
 }
 
 ////////////////////////////////////
@@ -221,7 +226,7 @@ GameObject* Game::checkIntersects(F32 x, F32 y, F32 width, F32 height, GameObjec
 			x1 = m_objects[i]->getX();
 			y1 = m_objects[i]->getY();
 
-			minDistance = (width + (F32)m_objects[i]->getWidth()) / 2;			//Реализация только для квадратных плиток!
+			minDistance = (width + (F32)m_objects[i]->getWidth()) / 2;			//Code smell!!!
 			realDistance = sqrt(pow(x1 - x0, 2) + pow(y1 - y0, 2)) * passing;
 
 			if (realDistance < minDistance)
@@ -327,9 +332,9 @@ void Game::levelUP()
 ////////////////////////////////////
 void Game::setOffSets(GameObject * object)
 {
-	if (object->getX() > WINDOW_X / 2 / TILE_SIZE && object->getX() < COLUMNS - WINDOW_X / 2 / TILE_SIZE - 1.5)
+//	if (object->getX() > WINDOW_X / 2 / TILE_SIZE && object->getX() < COLUMNS - WINDOW_X / 2 / TILE_SIZE - 1.5)
 		m_offSetX = object->getX() - WINDOW_X / 2 / TILE_SIZE;
-	if (object->getY() > WINDOW_Y / 2 / TILE_SIZE && object->getY() < ROWS - WINDOW_Y / 2 / TILE_SIZE - 1.5)
+//	if (object->getY() > WINDOW_Y / 2 / TILE_SIZE && object->getY() < ROWS - WINDOW_Y / 2 / TILE_SIZE - 1.5)
 		m_offSetY = object->getY() - WINDOW_Y / 2 / TILE_SIZE - 1.0;
 }
 
@@ -339,5 +344,7 @@ S32 Game::getAngleMouseToObject(GameObject * object)
 	F32 dX = mousePixelPos.x - (object->getX() - getOffSetX()) * TILE_SIZE;
 	F32 dY = mousePixelPos.y - (object->getY() - getOffSetY()) * TILE_SIZE;
 
-	return (S32)(atan2(dY, dX) * (180 / 3.14159265));
+	S32 res = (S32)(atan2(dY, dX) * (180 / 3.14159265));
+	if(res < 0)	res += 360;
+	return res;
 }
