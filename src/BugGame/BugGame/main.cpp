@@ -13,16 +13,24 @@
 #include "Improvements.h"
 
 
+//PTR(Improvements);
+
+
 int main()
 {
-
+	
+	ImprovementsPtr x = Improvements::Create();
+	
+	getchar();
+	
 	Game game;
+		
 	
 	game.setupSystem();
 	game.initialize();
-
+	
 	while (game.loop());
-
+	
 	game.shutdown();
 
 	return 0;

@@ -10,9 +10,6 @@
 // Includes
 #include "Improvements.h"
 
-namespace Bug
-{
-
 	////////////////////////////////////
 	Improvements::Improvements()
 		: m_variable( 0 ) // this how to initialize variables (if that need you)
@@ -51,4 +48,3 @@ namespace Bug
 	}
 
 
-}

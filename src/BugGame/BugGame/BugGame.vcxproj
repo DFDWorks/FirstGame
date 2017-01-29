@@ -13,12 +13,14 @@
   <ItemGroup>
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="GameObject.cpp" />
+    <ClCompile Include="GO_Cockroach.cpp" />
     <ClCompile Include="Improvements.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameObject.h" />
+    <ClInclude Include="GO_Cockroach.h" />
     <ClInclude Include="Improvements.h" />
     <ClInclude Include="Levels.h" />
     <ClInclude Include="LibsAndConstants.h" />

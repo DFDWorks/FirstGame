@@ -55,11 +55,9 @@ typedef	double D64; // double 64 bit
 ////////////////////////////////////
 // Everything should be in namespace. Write all code in our namespace Bug:
 
-namespace Bug
-{
 	// here i will show you how to use some things in C++
 
-	PTR( Improvements );
+	PTR(Improvements);
 
 	class Improvements
 	{
@@ -69,7 +67,7 @@ namespace Bug
 		////////////////////////////////////
 		Improvements(); // Constructor. Look in cpp file how to write it.
 		~Improvements(){}
-
+		
 		////////////////////////////////////
 		void setName( const STR& name );      //Thats setter. Argument should to be with & to work with part of memory of object.
 
@@ -97,6 +95,6 @@ namespace Bug
 	
 	
 
-}
+
 #endif
 ////////////////////////////////////

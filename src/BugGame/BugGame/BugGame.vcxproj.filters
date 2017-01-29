@@ -22,6 +22,9 @@
     <Filter Include="Файлы ресурсов\HelperClasses">
       <UniqueIdentifier>{e34e09cf-420e-4315-9681-ef719acc2f67}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Файлы ресурсов\Hero">
+      <UniqueIdentifier>{9d771322-fee3-4738-bd73-b13ad8add849}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -35,6 +38,9 @@
     </ClCompile>
     <ClCompile Include="Improvements.cpp">
       <Filter>Файлы ресурсов\HelperClasses</Filter>
+    </ClCompile>
+    <ClCompile Include="GO_Cockroach.cpp">
+      <Filter>Файлы ресурсов\Hero</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -52,6 +58,9 @@
     </ClInclude>
     <ClInclude Include="Improvements.h">
       <Filter>Файлы ресурсов\HelperClasses</Filter>
+    </ClInclude>
+    <ClInclude Include="GO_Cockroach.h">
+      <Filter>Файлы ресурсов\Hero</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
