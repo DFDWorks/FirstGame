@@ -13,15 +13,12 @@
 #include "Improvements.h"
 
 
-//PTR(Improvements);
+PTR(Improvements);
 
 
 int main()
 {
 	
-	ImprovementsPtr x = Improvements::Create();
-	
-	getchar();
 	
 	Game game;
 		

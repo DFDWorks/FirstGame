@@ -13,11 +13,11 @@
 ////////////////////////////////////
 Cockroach::Cockroach()
 {
-	m_width = kCockroachColumns;
-	m_height = kCockroachRows;
+	m_width = kCockroachColumns / 10;
+	m_height = kCockroachRows / 10;
 	m_wCenter = kCockroachColumns/2;
 	m_hCenter = kCockroachRows/2;
-
+	m_sprite->setTexture(*TextureAtlas);
 	m_directionFormally = 0;
 	m_directionReal = 0;
 	m_rotationSpeed = kCockroachRotSpeed;
@@ -40,7 +40,7 @@ void Cockroach::render(sf::RenderWindow* rw)
 	sf::IntRect texRect;
 	texRect = kCockroachImage;
 	m_sprite->setRotation(m_directionReal);
-
+	rw->draw(*m_sprite);
 	setTextureRect(texRect);
 	GameObject::render(rw);
 }

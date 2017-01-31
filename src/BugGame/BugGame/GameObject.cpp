@@ -39,7 +39,7 @@ GameObject::GameObject()
 	m_sideOfRotation = 1;
 
 	m_sprite = new sf::Sprite();
-	m_sprite->setTexture(*TextureAtlas);
+
 }
 
 ////////////////////////////////////
@@ -50,9 +50,9 @@ GameObject::~GameObject()
 }
 
 ////////////////////////////////////
-void GameObject::render(sf::RenderWindow* rw)
+void GameObject::render( sf::RenderWindow* rw )
 {
-	if (m_sprite)
+	if ( m_sprite )
 	{
 		F32 xSprite = getWCenter();
 		F32 ySprite = getHCenter();
@@ -61,7 +61,12 @@ void GameObject::render(sf::RenderWindow* rw)
 
 		m_sprite->setOrigin(xSprite * TILE_SIZE, ySprite * TILE_SIZE);
 		m_sprite->setPosition(column * TILE_SIZE, row * TILE_SIZE);
-		rw->draw(*m_sprite);
+
+		//m_text->setOrigin(xSprite * TILE_SIZE, ySprite * TILE_SIZE);
+		//m_text->setPosition(column * TILE_SIZE, row * TILE_SIZE);
+
+		
+		
 	}
 }
 
@@ -141,6 +146,6 @@ bool GameObject::rotation(F32 deltaTime)
 //		m_directionReal = m_directionFormally;
 
 
-	printf("%i, %f, %i, %f\n",m_directionFormally, m_directionReal, difference, deltaAngle);
+	//printf("%i, %f, %i, %f\n",m_directionFormally, m_directionReal, difference, deltaAngle);
 	return true;
 }

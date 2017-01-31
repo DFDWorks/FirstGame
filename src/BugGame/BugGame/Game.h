@@ -15,7 +15,8 @@
 
 enum GameObjectType;
 class GameObject;
-
+PTR(Label);
+PTR(GameHUD);
 
 class Game
 {
@@ -101,6 +102,7 @@ private:
 
 	GameObject* m_player;
 	GameObject* m_objects[MAX_OBJ];
+	GameHUDPtr m_hud;
 
 	S32 m_diedEnemiesCount;
 

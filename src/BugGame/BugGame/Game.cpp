@@ -12,9 +12,8 @@
 #include "Game.h"
 #include "Improvements.h"
 #include "Levels.h"
-
+#include "GameHUD.h"	
 #include "GO_Cockroach.h"	
-
 
 sf::Texture* TextureAtlas;
 
@@ -29,6 +28,8 @@ Game::Game()
 	m_isMenuActive = true;
 
 	m_player = NULL;
+	
+	m_hud = NULL;
 	for (S32 i = 0; i < MAX_OBJ; i++)
 		m_objects[i] = NULL;
 
@@ -100,6 +101,13 @@ void Game::initialize()
 
 	m_player = new Cockroach();
 	m_player->setGame(this);
+
+	
+	
+
+	m_hud = GameHUD::Create();
+	m_hud->setGame( this );
+	
 }
 
 ////////////////////////////////////
@@ -170,8 +178,11 @@ void Game::render()
 			m_objects[i]->render(m_renderWindow);
 			m_btn_obj++;
 		}
+	m_hud->render(m_renderWindow);
 
 	m_player->render(m_renderWindow);
+	
+	
 
 	// End frame
 	m_renderWindow->display();
@@ -204,6 +215,8 @@ void Game::update(F32 dt)
 	}
 
 	m_player->update(dt);
+	m_hud->update(dt);
+	
 }
 
 ////////////////////////////////////

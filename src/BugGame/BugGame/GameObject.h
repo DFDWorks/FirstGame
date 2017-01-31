@@ -17,7 +17,6 @@ class Game;
 enum GameObjectType
 {
 	GameObjectType_None,
-
 	MAX
 
 };
@@ -125,6 +124,8 @@ public:
 	////////////////////////////////////
 	void setTextureRect(sf::IntRect rect){ m_sprite->setTextureRect(rect); }
 
+	
+
 	////////////////////////////////////
 	void setDirectionDegree(S32 directionDegree){ m_directionFormally = directionDegree; }
 
@@ -160,4 +161,5 @@ protected:
 	S32 m_sideOfRotation;			// 1 - clockwise, -1 - anticlockwise
 
 	sf::Sprite* m_sprite;
+	
 };

@@ -25,6 +25,12 @@
     <Filter Include="Файлы ресурсов\Hero">
       <UniqueIdentifier>{9d771322-fee3-4738-bd73-b13ad8add849}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Файлы ресурсов\HUD">
+      <UniqueIdentifier>{f19545a4-4895-47cb-8f10-325081c2bdfe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы ресурсов\2d">
+      <UniqueIdentifier>{05fbcad4-6512-40ad-bad7-42738ec33ca5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -41,6 +47,12 @@
     </ClCompile>
     <ClCompile Include="GO_Cockroach.cpp">
       <Filter>Файлы ресурсов\Hero</Filter>
+    </ClCompile>
+    <ClCompile Include="GameHUD.cpp">
+      <Filter>Файлы ресурсов\HUD</Filter>
+    </ClCompile>
+    <ClCompile Include="Label.cpp">
+      <Filter>Файлы ресурсов\2d</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -61,6 +73,12 @@
     </ClInclude>
     <ClInclude Include="GO_Cockroach.h">
       <Filter>Файлы ресурсов\Hero</Filter>
+    </ClInclude>
+    <ClInclude Include="GameHUD.h">
+      <Filter>Файлы ресурсов\HUD</Filter>
+    </ClInclude>
+    <ClInclude Include="Label.h">
+      <Filter>Файлы ресурсов\2d</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
