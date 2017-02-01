@@ -37,6 +37,9 @@ public:
 	void setText(const STR& str){ m_text->setString(str); }
 
 	////////////////////////////////////
+	void setPosition(const F32& x, const F32& y){ m_text->setPosition(x,y); }
+
+	////////////////////////////////////
 	inline const sf::Text* getText(){ return m_text; }
 
 	////////////////////////////////////
@@ -44,6 +47,9 @@ public:
 
 	////////////////////////////////////
 	static LabelPtr Create( const STR& text );
+
+	////////////////////////////////////
+	operator sf::Text*() const { return m_text; }
 
 private:
 

@@ -59,11 +59,8 @@ void GameObject::render( sf::RenderWindow* rw )
 		F32 column = m_x - m_game->getOffSetX();
 		F32 row = m_y - m_game->getOffSetY();
 
-		m_sprite->setOrigin(xSprite * TILE_SIZE, ySprite * TILE_SIZE);
-		m_sprite->setPosition(column * TILE_SIZE, row * TILE_SIZE);
-
-		//m_text->setOrigin(xSprite * TILE_SIZE, ySprite * TILE_SIZE);
-		//m_text->setPosition(column * TILE_SIZE, row * TILE_SIZE);
+		//m_sprite->setOrigin(xSprite * TILE_SIZE, ySprite * TILE_SIZE);
+		//m_sprite->setPosition(column * TILE_SIZE, row * TILE_SIZE);
 
 		
 		

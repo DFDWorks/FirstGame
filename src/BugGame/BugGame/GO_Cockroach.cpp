@@ -21,6 +21,8 @@ Cockroach::Cockroach()
 	m_directionFormally = 0;
 	m_directionReal = 0;
 	m_rotationSpeed = kCockroachRotSpeed;
+	m_sprite->setOrigin(getWCenter() * TILE_SIZE, getHCenter() * TILE_SIZE);
+	m_sprite->setPosition(9 * TILE_SIZE, 9 * TILE_SIZE);
 }
 
 ////////////////////////////////////
@@ -38,6 +40,8 @@ void Cockroach::update(F32 dt)
 void Cockroach::render(sf::RenderWindow* rw)
 {
 	sf::IntRect texRect;
+	
+	
 	texRect = kCockroachImage;
 	m_sprite->setRotation(m_directionReal);
 	rw->draw(*m_sprite);

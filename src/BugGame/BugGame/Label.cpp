@@ -37,13 +37,13 @@ bool Label::init()
 	m_font = new Font();
 	m_text = new Text();
 	Log("Loading Label...\n");
-	if (!m_font->loadFromFile("Capture_it.ttf"))
+	if (!m_font->loadFromFile("DroidSans.ttf"))
 	{
 		Log("Ouuu... FUCK! Cannot load font!\n");
 	}
 	m_text->setFont(*m_font);
 	m_text->setCharacterSize(24);
-	m_text->setFillColor(sf::Color(0, 255, 0));
+	m_text->setFillColor(sf::Color(0, 0, 255));
 	m_text->setStyle(sf::Text::Bold);
 	m_text->setPosition(0, 0);
 
@@ -56,14 +56,14 @@ bool Label::init(const STR& text)
 	m_font = new Font();
 	m_text = new Text();
 	Log("Loading Label...\n");
-	if (!m_font->loadFromFile("Capture_it.ttf"))
+	if (!m_font->loadFromFile("DroidSans.ttf"))
 	{
 		Log("Ouuu... FUCK! Cannot load font!\n");
 	}
 	m_text->setFont( *m_font );
 	m_text->setString(text);
 	m_text->setCharacterSize(24);
-	m_text->setFillColor(sf::Color(0, 255, 0));
+	m_text->setFillColor(sf::Color(0, 0, 255));
 	m_text->setStyle(sf::Text::Bold);
 	m_text->setPosition(0, 0);
 
@@ -82,8 +82,5 @@ void Label::update(F32 dt)
 ////////////////////////////////////
 void Label::render(sf::RenderWindow* rw)
 {
-	//Text* x = new Text();
-	//x->setString("321312");
 	GameObject::render(rw);
-	//rw->draw(*m_text);
 }

@@ -47,6 +47,9 @@ public:
 	void setGame(Game* game){ m_game = game; }
 
 	////////////////////////////////////
+	void setSprite( sf::Sprite* spr ){ m_sprite = spr; }
+
+	////////////////////////////////////
 	void setX(F32 x){ m_x = x; }
 
 	////////////////////////////////////

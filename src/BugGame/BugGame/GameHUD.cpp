@@ -15,14 +15,6 @@
 ////////////////////////////////////
 GameHUD::GameHUD()
 {
-	//m_width = kCockroachColumns;
-	//m_height = kCockroachRows;
-	//m_wCenter = kCockroachColumns / 2;
-	//m_hCenter = kCockroachRows / 2;
-	//
-	//m_directionFormally = 0;
-	//m_directionReal = 0;
-	//m_rotationSpeed = kCockroachRotSpeed;
 }
 
 ////////////////////////////////////
@@ -36,8 +28,15 @@ bool GameHUD::init()
 {
 	Log( "Loading GameHUD...\n" );
 	
-	m_label = Label::Create( "Hello" );
-	
+	m_label = Label::Create( "Level \"Asshole\" " );
+	m_label->setPosition(20,100);
+	sf::Texture* hud = new sf::Texture();
+	hud->loadFromFile( "Hud.png" );
+	m_sprite->setTexture( *hud );
+	m_sprite->setPosition( 0, 0 );
+	m_sprite->setScale( 0.5f, 0.5f );
+	m_sprite->setTextureRect( sf::IntRect( 0, 0, 335, 160 ) );
+
 	return true;
 }
 
@@ -52,7 +51,8 @@ void GameHUD::update( F32 dt )
 void GameHUD::render(sf::RenderWindow* rw)
 {
 	GameObject::render(rw);
+	rw->draw(*m_label->operator sf::Text *());
+	rw->draw( *m_sprite );
 	
-	rw->draw(*m_label->getText());
 
 }
