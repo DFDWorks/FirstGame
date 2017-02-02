@@ -14,6 +14,10 @@
 
 ////////////////////////////////////
 GameHUD::GameHUD()
+	: m_indicators( Indicators::MAX )
+	, m_lifeCoeff( 0.531f )
+	, m_manaCoeff( 1.0f )
+	, m_staminaCoeff( 1.0f )
 {
 }
 
@@ -28,6 +32,31 @@ bool GameHUD::init()
 {
 	Log( "Loading GameHUD...\n" );
 	
+	m_indiPos.reserve( Indicators::MAX );
+	for ( S32 i = 0, size = m_indiPos.size(); i < size; ++i )
+		m_indiPos[i].reserve(5);
+
+	m_indiPos = {
+		{ 347, 11, 199, 48 },
+		{ 347, 55, 190, 48 },
+		{ 347, 100, 190, 48 }
+	};
+
+	//Indicators Loading
+	sf::Texture* tx = new sf::Texture();
+	tx->loadFromFile("Hud.png");
+	
+	for (U16 i = Indicators::Life; i < Indicators::MAX; i++)
+	{
+		m_indicators[i] = new sf::Sprite();
+		m_indicators[i]->setTexture(*tx);
+		m_indicators[i]->setPosition( 78.0f, 8.0f );
+		m_indicators[i]->setScale(0.531f, 0.5f);
+		m_indicators[i]->setTextureRect(sf::IntRect(m_indiPos[i-1][0], m_indiPos[i-1][1], m_indiPos[i-1][2], m_indiPos[i-1][3]));
+	}
+
+	//delete tx;
+
 	m_label = Label::Create( "Level \"Asshole\" " );
 	m_label->setPosition(20,100);
 	sf::Texture* hud = new sf::Texture();
@@ -35,8 +64,8 @@ bool GameHUD::init()
 	m_sprite->setTexture( *hud );
 	m_sprite->setPosition( 0, 0 );
 	m_sprite->setScale( 0.5f, 0.5f );
-	m_sprite->setTextureRect( sf::IntRect( 0, 0, 335, 160 ) );
-
+	m_sprite->setTextureRect( sf::IntRect( 0, 155, 335, 160 ) );
+	
 	return true;
 }
 
@@ -45,6 +74,13 @@ void GameHUD::update( F32 dt )
 {
 	GameObject::update(dt);
 	m_game->setOffSets(this);
+
+	if (m_lifeCoeff > 0)
+	{
+		F32 x = m_lifeCoeff -= dt/80;
+		F32 y = m_indicators[Indicators::Life]->getScale().y;
+		m_indicators[Indicators::Life]->setScale(x, y);
+	}
 }
 
 ////////////////////////////////////
@@ -52,7 +88,6 @@ void GameHUD::render(sf::RenderWindow* rw)
 {
 	GameObject::render(rw);
 	rw->draw(*m_label->operator sf::Text *());
-	rw->draw( *m_sprite );
-	
-
+	rw->draw( *m_indicators[Indicators::Life] );
+	rw->draw(*m_sprite);
 }

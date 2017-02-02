@@ -18,6 +18,17 @@
 ////////////////////////////////////
 PTR( GameHUD );
 
+namespace Indicators
+{
+	enum Enum
+	{
+		None = 0,
+		Life,
+		Stamina,
+		Mana,
+		MAX = 4
+	};
+}
 
 class GameHUD
 	: public GameObject
@@ -44,6 +55,12 @@ private:
 protected:
 	
 	LabelPtr m_label;
+	std::vector<sf::Sprite*> m_indicators;
+	std::vector<std::vector<U16>> m_indiPos;
+
+	F32 m_lifeCoeff;
+	F32 m_manaCoeff;
+	F32 m_staminaCoeff;
 };
 
 #endif

@@ -1,4 +1,4 @@
-﻿Сборка начата 02.02.2017 1:00:04.
+﻿Сборка начата 02.02.2017 2:20:25.
      1>Проект "D:\DFD\TARAKAN\FirstGame\src\BugGame\BugGame\BugGame.vcxproj" в узле 2 (целевые объекты Build).
      1>ClCompile:
          D:\Progs\VisualStudio\VC\bin\CL.exe /c /I"../../SFML-2.4.1/include" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D SFML_STATIC /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt GameHUD.cpp
@@ -22,4 +22,4 @@
 
 Сборка успешно завершена.
 
-Затраченное время: 00:00:00.86
+Затраченное время: 00:00:00.84
