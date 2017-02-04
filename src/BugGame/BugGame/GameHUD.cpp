@@ -11,6 +11,7 @@
 #include "GO_Cockroach.h"
 #include "Improvements.h"
 #include "GameHUD.h"
+#include "TextArea.h"
 
 ////////////////////////////////////
 GameHUD::GameHUD()
@@ -46,48 +47,57 @@ bool GameHUD::init()
 	sf::Texture* tx = new sf::Texture();
 	tx->loadFromFile("Hud.png");
 	
-	for (U16 i = Indicators::Life; i < Indicators::MAX; i++)
+	for ( U16 i = Indicators::Life; i < Indicators::MAX; i++ )
 	{
 		m_indicators[i] = new sf::Sprite();
-		m_indicators[i]->setTexture(*tx);
+		m_indicators[i]->setTexture( *tx );
 		m_indicators[i]->setPosition( 78.0f, 8.0f );
-		m_indicators[i]->setScale(0.531f, 0.5f);
-		m_indicators[i]->setTextureRect(sf::IntRect(m_indiPos[i-1][0], m_indiPos[i-1][1], m_indiPos[i-1][2], m_indiPos[i-1][3]));
+		m_indicators[i]->setScale( 0.531f, 0.5f );
+		m_indicators[i]->setTextureRect( sf::IntRect(m_indiPos[i-1][0], m_indiPos[i-1][1], m_indiPos[i-1][2], m_indiPos[i-1][3]) );
 	}
 
 	//delete tx;
 
 	m_label = Label::Create( "Level \"Asshole\" " );
-	m_label->setPosition(20,100);
+	m_label->setPosition( 20,100 );
 	sf::Texture* hud = new sf::Texture();
 	hud->loadFromFile( "Hud.png" );
 	m_sprite->setTexture( *hud );
 	m_sprite->setPosition( 0, 0 );
 	m_sprite->setScale( 0.5f, 0.5f );
 	m_sprite->setTextureRect( sf::IntRect( 0, 155, 335, 160 ) );
+
 	
+	
+
 	return true;
 }
 
 ////////////////////////////////////
 void GameHUD::update( F32 dt )
 {
-	GameObject::update(dt);
-	m_game->setOffSets(this);
+    GameObject::update( dt );
+	m_game->setOffSets( this );
 
 	if (m_lifeCoeff > 0)
 	{
 		F32 x = m_lifeCoeff -= dt/80;
 		F32 y = m_indicators[Indicators::Life]->getScale().y;
-		m_indicators[Indicators::Life]->setScale(x, y);
+		m_indicators[Indicators::Life]->setScale( x, y );
 	}
 }
-
+    
 ////////////////////////////////////
 void GameHUD::render(sf::RenderWindow* rw)
 {
+	TextAreaPtr x = TextArea::Create();
 	GameObject::render(rw);
-	rw->draw(*m_label->operator sf::Text *());
+	rw->draw( *m_label->operator sf::Text *() );
 	rw->draw( *m_indicators[Indicators::Life] );
-	rw->draw(*m_sprite);
+	rw->draw( *m_sprite );
+	//Log( sizeof(m_indicators) );
+	rw->draw( *x->getSprite() );
+	
+	
+	
 }

@@ -127,7 +127,8 @@ public:
 	////////////////////////////////////
 	void setTextureRect(sf::IntRect rect){ m_sprite->setTextureRect(rect); }
 
-	
+	////////////////////////////////////
+	inline const sf::Sprite* getSprite() const { return m_sprite; }
 
 	////////////////////////////////////
 	void setDirectionDegree(S32 directionDegree){ m_directionFormally = directionDegree; }

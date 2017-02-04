@@ -54,6 +54,9 @@
     <ClCompile Include="Label.cpp">
       <Filter>Файлы ресурсов\2d</Filter>
     </ClCompile>
+    <ClCompile Include="TextArea.cpp">
+      <Filter>Файлы ресурсов\2d</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h">
@@ -78,6 +81,9 @@
       <Filter>Файлы ресурсов\HUD</Filter>
     </ClInclude>
     <ClInclude Include="Label.h">
+      <Filter>Файлы ресурсов\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="TextArea.h">
       <Filter>Файлы ресурсов\2d</Filter>
     </ClInclude>
   </ItemGroup>

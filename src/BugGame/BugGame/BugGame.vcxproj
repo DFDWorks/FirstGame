@@ -18,6 +18,7 @@
     <ClCompile Include="Improvements.cpp" />
     <ClCompile Include="Label.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="TextArea.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h" />
@@ -28,6 +29,7 @@
     <ClInclude Include="Label.h" />
     <ClInclude Include="Levels.h" />
     <ClInclude Include="LibsAndConstants.h" />
+    <ClInclude Include="TextArea.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{8C430F0A-8D9E-4125-BEB8-69FCF5110F07}</ProjectGuid>
