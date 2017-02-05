@@ -11,6 +11,7 @@
 // Includes
 #include "GameObject.h"
 #include "Levels.h"
+#include "Button.h"
 
 ////////////////////////////////////
 
@@ -27,4 +28,8 @@ public:
 
 	////////////////////////////////////
 	void render(sf::RenderWindow* rw);
+
+protected:
+
+	ButtonPtr x;
 };

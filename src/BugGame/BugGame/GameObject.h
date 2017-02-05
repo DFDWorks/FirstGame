@@ -56,6 +56,9 @@ public:
 	F32 getX(){ return m_x; }
 
 	////////////////////////////////////
+	inline const sf::Sprite* getSprite() const { return m_sprite; }
+
+	////////////////////////////////////
 	void setY(F32 y){ m_y = y; }
 
 	////////////////////////////////////
