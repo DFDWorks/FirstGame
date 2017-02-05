@@ -55,8 +55,7 @@ public:
 	////////////////////////////////////
 	F32 getX(){ return m_x; }
 
-	////////////////////////////////////
-	inline const sf::Sprite* getSprite() const { return m_sprite; }
+	
 
 	////////////////////////////////////
 	void setY(F32 y){ m_y = y; }
@@ -130,7 +129,8 @@ public:
 	////////////////////////////////////
 	void setTextureRect(sf::IntRect rect){ m_sprite->setTextureRect(rect); }
 
-	
+	////////////////////////////////////
+	inline const sf::Sprite* getSprite() const { return m_sprite; }
 
 	////////////////////////////////////
 	void setDirectionDegree(S32 directionDegree){ m_directionFormally = directionDegree; }

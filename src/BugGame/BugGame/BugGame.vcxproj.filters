@@ -54,7 +54,11 @@
     <ClCompile Include="Label.cpp">
       <Filter>Файлы ресурсов\2d</Filter>
     </ClCompile>
+<<<<<<< HEAD
     <ClCompile Include="Button.cpp">
+=======
+    <ClCompile Include="TextArea.cpp">
+>>>>>>> 3bf9616013b55990b2b55e3c34e06a444e4d099b
       <Filter>Файлы ресурсов\2d</Filter>
     </ClCompile>
   </ItemGroup>
@@ -83,7 +87,11 @@
     <ClInclude Include="Label.h">
       <Filter>Файлы ресурсов\2d</Filter>
     </ClInclude>
+<<<<<<< HEAD
     <ClInclude Include="Button.h">
+=======
+    <ClInclude Include="TextArea.h">
+>>>>>>> 3bf9616013b55990b2b55e3c34e06a444e4d099b
       <Filter>Файлы ресурсов\2d</Filter>
     </ClInclude>
   </ItemGroup>

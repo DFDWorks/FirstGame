@@ -31,13 +31,16 @@ public:
 	virtual void update( F32 dt ) OVERRIDE;
 
 	////////////////////////////////////
-	virtual void render(sf::RenderWindow* rw) OVERRIDE;
+	virtual void render( sf::RenderWindow* rw ) OVERRIDE;
 
 	////////////////////////////////////
-	void setText(const STR& str){ m_text->setString(str); }
+	void setText( const STR& str ){ m_text->setString(str); }
 
 	////////////////////////////////////
-	void setPosition(const F32& x, const F32& y){ m_text->setPosition(x,y); }
+	void setPosition( const F32& x, const F32& y ){ m_text->setPosition(x,y); }
+
+	////////////////////////////////////
+	void setFont( const STR& str ){ m_font->loadFromFile( str ); }
 
 	////////////////////////////////////
 	inline const sf::Text* getText(){ return m_text; }

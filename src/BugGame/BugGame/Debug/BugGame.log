@@ -1,19 +1,48 @@
-﻿Сборка начата 05.02.2017 15:50:58.
+﻿Сборка начата 05.02.2017 16:17:08.
      1>Проект "C:\Users\Nname\Documents\Visual Studio 2013\Projects\FirstGame\src\BugGame\BugGame\BugGame.vcxproj" в узле 2 (целевые объекты Build).
      1>ClCompile:
-         C:\Program Files (x86)\Новая папка\VC\bin\CL.exe /c /I"../../SFML-2.4.1/include" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D SFML_STATIC /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Button.cpp GO_Cockroach.cpp Game.cpp GameHUD.cpp
+         C:\Program Files (x86)\Новая папка\VC\bin\CL.exe /c /I"../../SFML-2.4.1/include" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D SFML_STATIC /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Button.cpp GO_Cockroach.cpp Game.cpp GameHUD.cpp GameObject.cpp Label.cpp TextArea.cpp main.cpp
+         main.cpp
+     1>c:\users\nname\documents\visual studio 2013\projects\firstgame\src\buggame\buggame\improvements.h(43): warning C4005: Log: изменение макроопределения
+                 c:\users\nname\documents\visual studio 2013\projects\firstgame\src\buggame\buggame\improvements.h(42): см. предыдущее определение "Log"
+     1>c:\users\nname\documents\visual studio 2013\projects\firstgame\src\buggame\buggame\gameobject.h(91): warning C4244: =: преобразование "S32" в "F32", возможна потеря данных
+     1>c:\users\nname\documents\visual studio 2013\projects\firstgame\src\buggame\buggame\gameobject.h(97): warning C4244: =: преобразование "S32" в "F32", возможна потеря данных
+         TextArea.cpp
+     1>c:\users\nname\documents\visual studio 2013\projects\firstgame\src\buggame\buggame\improvements.h(43): warning C4005: Log: изменение макроопределения
+                 c:\users\nname\documents\visual studio 2013\projects\firstgame\src\buggame\buggame\improvements.h(42): см. предыдущее определение "Log"
+     1>c:\users\nname\documents\visual studio 2013\projects\firstgame\src\buggame\buggame\gameobject.h(91): warning C4244: =: преобразование "S32" в "F32", возможна потеря данных
+     1>c:\users\nname\documents\visual studio 2013\projects\firstgame\src\buggame\buggame\gameobject.h(97): warning C4244: =: преобразование "S32" в "F32", возможна потеря данных
+     1>c:\users\nname\documents\visual studio 2013\projects\firstgame\src\buggame\buggame\levels.h(21): warning C4305: инициализация: усечение из "double" к "const float"
+     1>c:\users\nname\documents\visual studio 2013\projects\firstgame\src\buggame\buggame\levels.h(25): warning C4244: аргумент: преобразование "const float" в "int", возможна потеря данных
+     1>c:\users\nname\documents\visual studio 2013\projects\firstgame\src\buggame\buggame\textarea.cpp(62): warning C4244: аргумент: преобразование "const F32" в "int", возможна потеря данных
+         Label.cpp
+     1>c:\users\nname\documents\visual studio 2013\projects\firstgame\src\buggame\buggame\improvements.h(43): warning C4005: Log: изменение макроопределения
+                 c:\users\nname\documents\visual studio 2013\projects\firstgame\src\buggame\buggame\improvements.h(42): см. предыдущее определение "Log"
+     1>c:\users\nname\documents\visual studio 2013\projects\firstgame\src\buggame\buggame\gameobject.h(91): warning C4244: =: преобразование "S32" в "F32", возможна потеря данных
+     1>c:\users\nname\documents\visual studio 2013\projects\firstgame\src\buggame\buggame\gameobject.h(97): warning C4244: =: преобразование "S32" в "F32", возможна потеря данных
+     1>c:\users\nname\documents\visual studio 2013\projects\firstgame\src\buggame\buggame\levels.h(21): warning C4305: инициализация: усечение из "double" к "const float"
+     1>c:\users\nname\documents\visual studio 2013\projects\firstgame\src\buggame\buggame\levels.h(25): warning C4244: аргумент: преобразование "const float" в "int", возможна потеря данных
+         GameObject.cpp
+     1>c:\users\nname\documents\visual studio 2013\projects\firstgame\src\buggame\buggame\improvements.h(43): warning C4005: Log: изменение макроопределения
+                 c:\users\nname\documents\visual studio 2013\projects\firstgame\src\buggame\buggame\improvements.h(42): см. предыдущее определение "Log"
+     1>c:\users\nname\documents\visual studio 2013\projects\firstgame\src\buggame\buggame\gameobject.h(91): warning C4244: =: преобразование "S32" в "F32", возможна потеря данных
+     1>c:\users\nname\documents\visual studio 2013\projects\firstgame\src\buggame\buggame\gameobject.h(97): warning C4244: =: преобразование "S32" в "F32", возможна потеря данных
+     1>c:\users\nname\documents\visual studio 2013\projects\firstgame\src\buggame\buggame\levels.h(21): warning C4305: инициализация: усечение из "double" к "const float"
+     1>c:\users\nname\documents\visual studio 2013\projects\firstgame\src\buggame\buggame\levels.h(25): warning C4244: аргумент: преобразование "const float" в "int", возможна потеря данных
+     1>c:\users\nname\documents\visual studio 2013\projects\firstgame\src\buggame\buggame\gameobject.cpp(117): warning C4244: =: преобразование "S32" в "F32", возможна потеря данных
+     1>c:\users\nname\documents\visual studio 2013\projects\firstgame\src\buggame\buggame\gameobject.cpp(121): warning C4244: инициализация: преобразование "F32" в "S32", возможна потеря данных
          GameHUD.cpp
      1>c:\users\nname\documents\visual studio 2013\projects\firstgame\src\buggame\buggame\improvements.h(43): warning C4005: Log: изменение макроопределения
                  c:\users\nname\documents\visual studio 2013\projects\firstgame\src\buggame\buggame\improvements.h(42): см. предыдущее определение "Log"
-     1>c:\users\nname\documents\visual studio 2013\projects\firstgame\src\buggame\buggame\gameobject.h(92): warning C4244: =: преобразование "S32" в "F32", возможна потеря данных
-     1>c:\users\nname\documents\visual studio 2013\projects\firstgame\src\buggame\buggame\gameobject.h(98): warning C4244: =: преобразование "S32" в "F32", возможна потеря данных
+     1>c:\users\nname\documents\visual studio 2013\projects\firstgame\src\buggame\buggame\gameobject.h(91): warning C4244: =: преобразование "S32" в "F32", возможна потеря данных
+     1>c:\users\nname\documents\visual studio 2013\projects\firstgame\src\buggame\buggame\gameobject.h(97): warning C4244: =: преобразование "S32" в "F32", возможна потеря данных
      1>c:\users\nname\documents\visual studio 2013\projects\firstgame\src\buggame\buggame\levels.h(21): warning C4305: инициализация: усечение из "double" к "const float"
      1>c:\users\nname\documents\visual studio 2013\projects\firstgame\src\buggame\buggame\levels.h(25): warning C4244: аргумент: преобразование "const float" в "int", возможна потеря данных
          Game.cpp
      1>c:\users\nname\documents\visual studio 2013\projects\firstgame\src\buggame\buggame\improvements.h(43): warning C4005: Log: изменение макроопределения
                  c:\users\nname\documents\visual studio 2013\projects\firstgame\src\buggame\buggame\improvements.h(42): см. предыдущее определение "Log"
-     1>c:\users\nname\documents\visual studio 2013\projects\firstgame\src\buggame\buggame\gameobject.h(92): warning C4244: =: преобразование "S32" в "F32", возможна потеря данных
-     1>c:\users\nname\documents\visual studio 2013\projects\firstgame\src\buggame\buggame\gameobject.h(98): warning C4244: =: преобразование "S32" в "F32", возможна потеря данных
+     1>c:\users\nname\documents\visual studio 2013\projects\firstgame\src\buggame\buggame\gameobject.h(91): warning C4244: =: преобразование "S32" в "F32", возможна потеря данных
+     1>c:\users\nname\documents\visual studio 2013\projects\firstgame\src\buggame\buggame\gameobject.h(97): warning C4244: =: преобразование "S32" в "F32", возможна потеря данных
      1>c:\users\nname\documents\visual studio 2013\projects\firstgame\src\buggame\buggame\levels.h(21): warning C4305: инициализация: усечение из "double" к "const float"
      1>c:\users\nname\documents\visual studio 2013\projects\firstgame\src\buggame\buggame\levels.h(25): warning C4244: аргумент: преобразование "const float" в "int", возможна потеря данных
      1>c:\users\nname\documents\visual studio 2013\projects\firstgame\src\buggame\buggame\game.cpp(58): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
@@ -26,15 +55,15 @@
          GO_Cockroach.cpp
      1>c:\users\nname\documents\visual studio 2013\projects\firstgame\src\buggame\buggame\improvements.h(43): warning C4005: Log: изменение макроопределения
                  c:\users\nname\documents\visual studio 2013\projects\firstgame\src\buggame\buggame\improvements.h(42): см. предыдущее определение "Log"
-     1>c:\users\nname\documents\visual studio 2013\projects\firstgame\src\buggame\buggame\gameobject.h(92): warning C4244: =: преобразование "S32" в "F32", возможна потеря данных
-     1>c:\users\nname\documents\visual studio 2013\projects\firstgame\src\buggame\buggame\gameobject.h(98): warning C4244: =: преобразование "S32" в "F32", возможна потеря данных
+     1>c:\users\nname\documents\visual studio 2013\projects\firstgame\src\buggame\buggame\gameobject.h(91): warning C4244: =: преобразование "S32" в "F32", возможна потеря данных
+     1>c:\users\nname\documents\visual studio 2013\projects\firstgame\src\buggame\buggame\gameobject.h(97): warning C4244: =: преобразование "S32" в "F32", возможна потеря данных
      1>c:\users\nname\documents\visual studio 2013\projects\firstgame\src\buggame\buggame\levels.h(21): warning C4305: инициализация: усечение из "double" к "const float"
      1>c:\users\nname\documents\visual studio 2013\projects\firstgame\src\buggame\buggame\levels.h(25): warning C4244: аргумент: преобразование "const float" в "int", возможна потеря данных
          Button.cpp
      1>c:\users\nname\documents\visual studio 2013\projects\firstgame\src\buggame\buggame\improvements.h(43): warning C4005: Log: изменение макроопределения
                  c:\users\nname\documents\visual studio 2013\projects\firstgame\src\buggame\buggame\improvements.h(42): см. предыдущее определение "Log"
-     1>c:\users\nname\documents\visual studio 2013\projects\firstgame\src\buggame\buggame\gameobject.h(92): warning C4244: =: преобразование "S32" в "F32", возможна потеря данных
-     1>c:\users\nname\documents\visual studio 2013\projects\firstgame\src\buggame\buggame\gameobject.h(98): warning C4244: =: преобразование "S32" в "F32", возможна потеря данных
+     1>c:\users\nname\documents\visual studio 2013\projects\firstgame\src\buggame\buggame\gameobject.h(91): warning C4244: =: преобразование "S32" в "F32", возможна потеря данных
+     1>c:\users\nname\documents\visual studio 2013\projects\firstgame\src\buggame\buggame\gameobject.h(97): warning C4244: =: преобразование "S32" в "F32", возможна потеря данных
      1>c:\users\nname\documents\visual studio 2013\projects\firstgame\src\buggame\buggame\levels.h(21): warning C4305: инициализация: усечение из "double" к "const float"
      1>c:\users\nname\documents\visual studio 2013\projects\firstgame\src\buggame\buggame\levels.h(25): warning C4244: аргумент: преобразование "const float" в "int", возможна потеря данных
          Создание кода...
@@ -47,9 +76,10 @@
          Debug\Improvements.obj
          Debug\Label.obj
          Debug\main.obj
+         Debug\TextArea.obj
          BugGame.vcxproj -> C:\Users\Nname\Documents\Visual Studio 2013\Projects\FirstGame\src\BugGame\Debug\BugGame.exe
      1>Сборка проекта "C:\Users\Nname\Documents\Visual Studio 2013\Projects\FirstGame\src\BugGame\BugGame\BugGame.vcxproj" завершена (целевые объекты Build).
 
 Сборка успешно завершена.
 
-Затраченное время: 00:00:09.87
+Затраченное время: 00:00:23.47
