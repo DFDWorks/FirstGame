@@ -55,10 +55,14 @@
       <Filter>Файлы ресурсов\2d</Filter>
     </ClCompile>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <ClCompile Include="Button.cpp">
 =======
     <ClCompile Include="TextArea.cpp">
 >>>>>>> 3bf9616013b55990b2b55e3c34e06a444e4d099b
+=======
+    <ClCompile Include="TextArea.cpp">
+>>>>>>> origin/mainBranch
       <Filter>Файлы ресурсов\2d</Filter>
     </ClCompile>
   </ItemGroup>
@@ -88,10 +92,14 @@
       <Filter>Файлы ресурсов\2d</Filter>
     </ClInclude>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <ClInclude Include="Button.h">
 =======
     <ClInclude Include="TextArea.h">
 >>>>>>> 3bf9616013b55990b2b55e3c34e06a444e4d099b
+=======
+    <ClInclude Include="TextArea.h">
+>>>>>>> origin/mainBranch
       <Filter>Файлы ресурсов\2d</Filter>
     </ClInclude>
   </ItemGroup>

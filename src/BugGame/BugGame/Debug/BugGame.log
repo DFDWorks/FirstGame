@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 ﻿Сборка начата 05.02.2017 16:17:08.
      1>Проект "C:\Users\Nname\Documents\Visual Studio 2013\Projects\FirstGame\src\BugGame\BugGame\BugGame.vcxproj" в узле 2 (целевые объекты Build).
+=======
+﻿Сборка начата 04.02.2017 2:08:06.
+     1>Проект "D:\DFD\TARAKAN\FirstGame\src\BugGame\BugGame\BugGame.vcxproj" в узле 2 (целевые объекты Build).
+>>>>>>> origin/mainBranch
      1>ClCompile:
          C:\Program Files (x86)\Новая папка\VC\bin\CL.exe /c /I"../../SFML-2.4.1/include" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D SFML_STATIC /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Button.cpp GO_Cockroach.cpp Game.cpp GameHUD.cpp GameObject.cpp Label.cpp TextArea.cpp main.cpp
          main.cpp
@@ -32,6 +37,7 @@
      1>c:\users\nname\documents\visual studio 2013\projects\firstgame\src\buggame\buggame\gameobject.cpp(117): warning C4244: =: преобразование "S32" в "F32", возможна потеря данных
      1>c:\users\nname\documents\visual studio 2013\projects\firstgame\src\buggame\buggame\gameobject.cpp(121): warning C4244: инициализация: преобразование "F32" в "S32", возможна потеря данных
          GameHUD.cpp
+<<<<<<< HEAD
      1>c:\users\nname\documents\visual studio 2013\projects\firstgame\src\buggame\buggame\improvements.h(43): warning C4005: Log: изменение макроопределения
                  c:\users\nname\documents\visual studio 2013\projects\firstgame\src\buggame\buggame\improvements.h(42): см. предыдущее определение "Log"
      1>c:\users\nname\documents\visual studio 2013\projects\firstgame\src\buggame\buggame\gameobject.h(91): warning C4244: =: преобразование "S32" в "F32", возможна потеря данных
@@ -79,7 +85,21 @@
          Debug\TextArea.obj
          BugGame.vcxproj -> C:\Users\Nname\Documents\Visual Studio 2013\Projects\FirstGame\src\BugGame\Debug\BugGame.exe
      1>Сборка проекта "C:\Users\Nname\Documents\Visual Studio 2013\Projects\FirstGame\src\BugGame\BugGame\BugGame.vcxproj" завершена (целевые объекты Build).
+=======
+     1>d:\dfd\tarakan\firstgame\src\buggame\buggame\improvements.h(43): warning C4005: Log: изменение макроопределения
+                 d:\dfd\tarakan\firstgame\src\buggame\buggame\improvements.h(42): см. предыдущее определение "Log"
+     1>d:\dfd\tarakan\firstgame\src\buggame\buggame\gameobject.h(89): warning C4244: =: преобразование "S32" в "F32", возможна потеря данных
+     1>d:\dfd\tarakan\firstgame\src\buggame\buggame\gameobject.h(95): warning C4244: =: преобразование "S32" в "F32", возможна потеря данных
+     1>d:\dfd\tarakan\firstgame\src\buggame\buggame\levels.h(21): warning C4305: инициализация: усечение из "double" к "const float"
+     1>d:\dfd\tarakan\firstgame\src\buggame\buggame\levels.h(25): warning C4244: аргумент: преобразование "const float" в "int", возможна потеря данных
+     1>d:\dfd\tarakan\firstgame\src\buggame\buggame\gamehud.cpp(98): error C2100: недопустимое косвенное обращение
+     1>Сборка проекта "D:\DFD\TARAKAN\FirstGame\src\BugGame\BugGame\BugGame.vcxproj" завершена (целевые объекты Build) с ошибкой.
+>>>>>>> origin/mainBranch
 
-Сборка успешно завершена.
+Ошибка сборки.
 
+<<<<<<< HEAD
 Затраченное время: 00:00:23.47
+=======
+Затраченное время: 00:00:00.57
+>>>>>>> origin/mainBranch
