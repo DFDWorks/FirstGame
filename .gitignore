@@ -29,3 +29,5 @@
 *.opensdf
 src/BugGame/BugGame.sdf
 src/BugGame/BugGame/Debug/BugGame.log
+src/BugGame/BugGame.sdf
+src/BugGame/BugGame.v12.suo
