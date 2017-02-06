@@ -27,7 +27,8 @@ TextAreaPtr TextArea::Create()
 ////////////////////////////////////
 bool TextArea::init()
 {
-	
+	GameObject::init();						//TRiOLD:	Call of the designer of the base class
+
 	Log( "Loading TextArea...\n" );
 	sf::Texture* area = new sf::Texture();
 	area->loadFromFile( "speak_areas01.png" );
@@ -44,7 +45,7 @@ bool TextArea::init()
 void TextArea::update( F32 dt )
 {
 	GameObject::update( dt );
-	m_game->setOffSets( this );
+//	m_game->setOffSets( this );	
 	
 }
 

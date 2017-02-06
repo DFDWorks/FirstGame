@@ -16,6 +16,9 @@
 #include <ctime>
 #include <cmath>
 #include <cstring>
+#include <iostream>
+#include <memory>
+#include <vector>
 
 #include <SFML/Graphics.hpp>
 

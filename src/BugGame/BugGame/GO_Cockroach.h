@@ -3,7 +3,7 @@
 //
 // Author: TRiOLD
 //
-// 29.01.17
+// 29.01.17				upd 06.02.17
 ////////////////////////////////////
 #pragma once
 
@@ -14,6 +14,8 @@
 
 ////////////////////////////////////
 
+PTR( Cockroach );
+
 class Cockroach
 	: public GameObject
 {
@@ -23,8 +25,17 @@ public:
 	Cockroach();
 
 	////////////////////////////////////
-	void update(F32 dt);
+	static CockroachPtr Create();
 
 	////////////////////////////////////
-	void render(sf::RenderWindow* rw);
+	void update( F32 dt );
+
+	////////////////////////////////////
+	void render( sf::RenderWindow* rw );
+
+	////////////////////////////////////
+protected:
+
+	bool init();
+
 };

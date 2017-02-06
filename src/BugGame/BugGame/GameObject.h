@@ -3,7 +3,7 @@
 //
 // Author: TRiOLD
 //
-// 29.01.17
+// 29.01.17				upd 06.02.17
 ////////////////////////////////////
 #pragma once
 
@@ -11,17 +11,19 @@
 // Includes
 #include "Game.h"
 
-class Game;
-
 ////////////////////////////////////
 enum GameObjectType
 {
 	GameObjectType_None,
-	MAX
+	GameObjectType_MAX
 
 };
 
+PTR( Game );
+PTR( GameObject );
+
 class GameObject
+	: public std::enable_shared_from_this<GameObject>
 {
 public:
 
@@ -29,22 +31,22 @@ public:
 	GameObject();
 
 	////////////////////////////////////
-	virtual ~GameObject();
+	static GameObjectPtr Create();
 
 	////////////////////////////////////
-	virtual void render(sf::RenderWindow* rw);
+	virtual void render( sf::RenderWindow* rw );
 
 	////////////////////////////////////
-	virtual void update(F32 dt);
+	virtual void update( F32 dt );
 
 	////////////////////////////////////
-	virtual void intersect(GameObject* object);
+	virtual void intersect( GameObjectPtr object );
 
 	////////////////////////////////////
 	GameObjectType getType(){ return m_type; }
 
 	////////////////////////////////////
-	void setGame(Game* game){ m_game = game; }
+	void setGame( GamePtr game ){ m_game = game; }
 
 	////////////////////////////////////
 	void setSprite( sf::Sprite* spr ){ m_sprite = spr; }
@@ -62,85 +64,90 @@ public:
 	F32 getY(){ return m_y; }
 
 	////////////////////////////////////
-	void setXSpeed(F32 xSpeed){ m_xSpeed = xSpeed; }
+	void setXSpeed( F32 xSpeed ){ m_xSpeed = xSpeed; }
 
 	////////////////////////////////////
 	F32 getXSpeed(){ return m_xSpeed; }
 
 	////////////////////////////////////
-	void setYSpeed(F32 ySpeed){ m_ySpeed = ySpeed; }
+	void setYSpeed( F32 ySpeed ){ m_ySpeed = ySpeed; }
 
 	////////////////////////////////////
 	F32 getYSpeed(){ return m_ySpeed; }
 
 	////////////////////////////////////
-	void setWidth(F32 width){ m_width = width; }
+	void setWidth( F32 width ){ m_width = width; }
 
 	////////////////////////////////////
 	F32 getWidth(){ return m_width; }
 
 	////////////////////////////////////
-	void setHeight(F32 height){ m_height = height; }
+	void setHeight( F32 height ){ m_height = height; }
 
 	////////////////////////////////////
 	F32 getHeight(){ return m_height; }
 
 	////////////////////////////////////
-	void setWCenter(S32 center){ m_wCenter = center; }
+	void setWCenter( S32 center ){ m_wCenter = center; }
 
 	////////////////////////////////////
 	F32 getWCenter(){ return m_wCenter; }
 
 	////////////////////////////////////
-	void setHCenter(S32 center){ m_hCenter = center; }
+	void setHCenter( S32 center ){ m_hCenter = center; }
 
 	////////////////////////////////////
 	F32 getHCenter(){ return m_hCenter; }
 
 	////////////////////////////////////
-	void setHealth(S32 health){ m_health = health; }
+	void setHealth( S32 health ){ m_health = health; }
 
 	////////////////////////////////////
 	S32 getHealth(){ return m_health; }
 
 	////////////////////////////////////
-	void setDestroyAfterDeath(bool destroyAfterDeath){ m_destroyAfterDeath = destroyAfterDeath; }
+	void setDestroyAfterDeath( bool destroyAfterDeath ){ m_destroyAfterDeath = destroyAfterDeath; }
 
 	////////////////////////////////////
 	bool getDestroyAfterDeath(){ return m_destroyAfterDeath; }
 
 	////////////////////////////////////
-	void setInvulnerable(bool invulnerable){ m_invulnerable = invulnerable; }
+	void setInvulnerable( bool invulnerable ){ m_invulnerable = invulnerable; }
 
 	////////////////////////////////////
 	bool getInvulnerable(){ return m_invulnerable; }
 
 	////////////////////////////////////
-	void setPhysical(bool physical){ m_physical = physical; }
+	void setPhysical( bool physical ){ m_physical = physical; }
 
 	////////////////////////////////////
 	bool getPhysical(){ return m_physical; }
 
 	////////////////////////////////////
-	void doDamage(S32 damage);
+	void doDamage( S32 damage );
 
 	////////////////////////////////////
-	void setTextureRect(sf::IntRect rect){ m_sprite->setTextureRect(rect); }
+	void setTextureRect( sf::IntRect rect ){ m_sprite->setTextureRect(rect); }
 
 	////////////////////////////////////
 	inline const sf::Sprite* getSprite() const { return m_sprite; }
 
 	////////////////////////////////////
-	void setDirectionDegree(S32 directionDegree){ m_directionFormally = directionDegree; }
+	void setDirectionDegree( S32 directionDegree ){ m_directionFormally = directionDegree; }
 
 	////////////////////////////////////
 	S32 getDirectionDegree(){ return m_directionFormally; }
 
 	////////////////////////////////////
-	bool rotation(F32 deltaTime);
+	bool rotation( F32 deltaTime );
+
+	////////////////////////////////////
+protected:
+
+	bool init();
 
 protected:
-	Game* m_game;
+	GamePtr m_game;
 	GameObjectType m_type;
 
 	F32 m_x;

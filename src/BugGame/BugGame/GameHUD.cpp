@@ -31,17 +31,22 @@ GameHUDPtr GameHUD::Create()
 ////////////////////////////////////
 bool GameHUD::init()
 {
+	GameObject::init();							
+
 	Log( "Loading GameHUD...\n" );
 	
-	m_indiPos.reserve( Indicators::MAX );
-	for ( S32 i = 0, size = m_indiPos.size(); i < size; ++i )
-		m_indiPos[i].reserve(5);
 
-	m_indiPos = {
-		{ 347, 11, 199, 48 },
-		{ 347, 55, 190, 48 },
-		{ 347, 100, 190, 48 }
-	};
+	U16 arr[][Indicators::MAX] = {
+									{ 347, 11, 199, 48 },
+									{ 347, 55, 190, 48 },
+									{ 347, 100, 190, 48 }
+								 };
+	for ( S32 j = 0; j < Indicators::MAX; j++ )
+        {
+            m_indiPos.push_back(std::vector<U16>());
+            for (S32 i = 0; i < 5; i++ )
+                 m_indiPos[j].push_back(arr[j][i]);
+        }
 
 	//Indicators Loading
 	sf::Texture* tx = new sf::Texture();
@@ -77,7 +82,6 @@ bool GameHUD::init()
 void GameHUD::update( F32 dt )
 {
     GameObject::update( dt );
-	m_game->setOffSets( this );
 
 	if (m_lifeCoeff > 0)
 	{

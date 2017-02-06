@@ -3,7 +3,7 @@
 //
 // Author: TRiOLD
 //
-// 29.01.17
+// 29.01.17				upd 06.02.17
 ////////////////////////////////////
 
 #pragma once
@@ -13,12 +13,14 @@
 #include "LibsAndConstants.h"
 #include "GameObject.h"
 
-enum GameObjectType;
-class GameObject;
-PTR(Label);
-PTR(GameHUD);
+PTR( GameObject );	enum GameObjectType;
+PTR( Label );
+PTR( GameHUD );
+
+PTR( Game );
 
 class Game
+	: public std::enable_shared_from_this<Game>
 {
 public:
 
@@ -26,7 +28,7 @@ public:
 	Game();
 
 	////////////////////////////////////
-	~Game();
+	static GamePtr Create();
 
 	////////////////////////////////////
 	void setupSystem();
@@ -41,31 +43,31 @@ public:
 	void shutdown();
 
 	////////////////////////////////////
-	void setGameActive(bool isActive) { m_isGameActive = isActive; }
+	void setGameActive( bool isActive ) { m_isGameActive = isActive; }
 
 	////////////////////////////////////
-	void setMenuActive(bool isActive) { m_isMenuActive = isActive; }
+	void setMenuActive( bool isActive ) { m_isMenuActive = isActive; }
 
 	////////////////////////////////////
-	void setSoundActive(bool isActive) { m_isSoundActive = isActive; }
+	void setSoundActive( bool isActive ) { m_isSoundActive = isActive; }
 
 	////////////////////////////////////
 	bool getSoundActive() { return m_isSoundActive; }
 
 	////////////////////////////////////
-	GameObject* createObject(GameObjectType type, F32 x, F32 y);
+	GameObjectPtr createObject( GameObjectType type, F32 x, F32 y );
 
 	////////////////////////////////////
-	void destroyObject(GameObject* object);
+	void destroyObject( GameObjectPtr object );
 
 	////////////////////////////////////
-	GameObject* checkIntersects(F32 x, F32 y, F32 width, F32 height, GameObject* exceptObject);
+	GameObjectPtr checkIntersects( F32 x, F32 y, F32 width, F32 height, GameObjectPtr exceptObject );
 
 	////////////////////////////////////
-	bool moveObjectTo(GameObject* object, F32 x, F32 y);
+	bool moveObjectTo( GameObjectPtr object, F32 x, F32 y );
 
 	////////////////////////////////////
-	S32 getObjectsCount(GameObjectType type);
+	S32 getObjectsCount( GameObjectType type );
 
 	////////////////////////////////////
 	S32 getDiedEnemiesCount(){ return m_diedEnemiesCount; }
@@ -85,7 +87,13 @@ private:
 	void render();
 
 	////////////////////////////////////
-	void update(F32 dt);
+	void update( F32 dt );
+
+	////////////////////////////////////
+protected:
+
+	bool init();
+
 
 private:
 	bool m_isGameActive;
@@ -100,8 +108,8 @@ private:
 	bool m_isMenuActive;
 	bool m_isSoundActive;
 
-	GameObject* m_player;
-	GameObject* m_objects[MAX_OBJ];
+	GameObjectPtr m_player;
+	GameObjectPtr m_objects[MAX_OBJ];
 	GameHUDPtr m_hud;
 
 	S32 m_diedEnemiesCount;
@@ -120,9 +128,9 @@ public:
 	sf::Vector2i mousePixelPos;
 
 
-	void setOffSets(GameObject * object);
+	void setOffSets( GameObjectPtr object );
 	F32 getOffSetX(){ return m_offSetX; }
 	F32 getOffSetY(){ return m_offSetY; }
 
-	S32 getAngleMouseToObject(GameObject * object);
+	S32 getAngleMouseToObject( GameObjectPtr object );
 };

@@ -18,8 +18,8 @@ const unsigned char LevelsData[LevelsCount][LevelLayers][LevelRows][LevelColumns
 
 
 ////////////////////////////////////
-const float kCockroachRotSpeed = 0.2;
-const float kCockroachColumns = 7.8125;
-const float kCockroachRows = 6;
+const float kCockroachRotSpeed = 0.2f;
+const float kCockroachColumns = 7.8125f;
+const float kCockroachRows = 6.0f;
 
 const sf::IntRect kCockroachImage = sf::IntRect( 0*TILE_SIZE, 0*TILE_SIZE, kCockroachColumns*TILE_SIZE, kCockroachRows*TILE_SIZE );

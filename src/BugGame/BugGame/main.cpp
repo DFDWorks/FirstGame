@@ -3,7 +3,7 @@
 //
 // Author: Triold, Name, Eugene
 //
-// **.01.17
+// **.01.17				upd 06.02.17
 ////////////////////////////////////
 
 ////////////////////////////////////
@@ -12,26 +12,20 @@
 #include "Game.h"
 #include "Improvements.h"
 
-
-PTR(Improvements);
-
+PTR( Improvements );
 
 int main()
 {
-	
-	
-	Game game;
+	GamePtr game = Game::Create();
 		
+	game->setupSystem();
+	game->initialize();
 	
-	game.setupSystem();
-	game.initialize();
+	while ( game->loop() );
 	
-	while (game.loop());
-	
-	game.shutdown();
+	game->shutdown();
 
 	return 0;
-
 } 
 
 // Спасибо Tinaynox`у, за суперские адекватные и полезные уроки на Pikabu!

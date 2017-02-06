@@ -14,9 +14,6 @@ using namespace sf;
 ////////////////////////////////////
 Label::Label()
 {
-	
-
-	
 }
 
 ////////////////////////////////////
@@ -34,6 +31,7 @@ LabelPtr Label::Create(const STR& text)
 ////////////////////////////////////
 bool Label::init()
 {
+	GameObject::init();
 	m_font = new Font();
 	m_text = new Text();
 	Log("Loading Label...\n");
@@ -51,11 +49,12 @@ bool Label::init()
 }
 
 ////////////////////////////////////
-bool Label::init(const STR& text)
+bool Label::init( const STR& text )
 {
+	GameObject::init();
 	m_font = new Font();
 	m_text = new Text();
-	Log("Loading Label...\n");
+	Log( "Loading Label...\n" );
 	if (!m_font->loadFromFile("DroidSans.ttf"))
 	{
 		Log("Ouuu... FUCK! Cannot load font!\n");
@@ -75,7 +74,7 @@ bool Label::init(const STR& text)
 void Label::update(F32 dt)
 {
 	GameObject::update(dt);
-	m_game->setOffSets(this);
+	//m_game->setOffSets(this);
 	
 }
 
