@@ -1,9 +1,9 @@
 ////////////////////////////////////
 // Cockroach
 //
-// Author: Eugene
+// Author: DD
 //
-// 29.01.17
+// 05.02.17
 ////////////////////////////////////
 
 #ifndef _Button_h_
@@ -36,6 +36,9 @@ public:
 	///////////////////////////////////
 	inline const sf::Mouse* getMouseButton() const { return m_mouse; }
 
+    ///////////////////////////////////
+	inline const sf::Vector2i getMousePosition() const { return m_posOfPixels; }
+
 	////////////////////////////////////
 	void setPosition( const F32& x, const F32& y ){ }
 
@@ -50,6 +53,8 @@ private:
 protected:
 
 	sf::Mouse* m_mouse;
+	sf::RenderWindow* m_gameWindow;
+	sf::Vector2i m_posOfPixels;
 
 };
 

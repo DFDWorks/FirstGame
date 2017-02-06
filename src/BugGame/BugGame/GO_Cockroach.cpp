@@ -39,10 +39,10 @@ void Cockroach::update(F32 dt)
 	}
 	GameObject::update(dt);
 	//x->update( dt );
-	if( x-> getMouseButton()->isButtonPressed(sf::Mouse::Left))
-	{
-		Log("Okay");
-	}
+	//if( sf::Mouse::isButtonPressed(sf::Mouse::Left) || x->getMousePosition->x == located)
+	//{
+	//	Log("Okay");
+	//}
 	
 }
 

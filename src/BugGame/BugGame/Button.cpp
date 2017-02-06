@@ -1,9 +1,9 @@
 ////////////////////////////////////
 // Cockroach
 //
-// Author: Eugene
+// Author: DD
 //
-// 29.01.17
+// 05.02.17
 ////////////////////////////////////
 
 ////////////////////////////////////
@@ -33,9 +33,10 @@ bool Button::init()
 	m_sprite->setTexture( *tex );
 	m_sprite->setPosition( 0, 0 );
 	m_sprite->setScale( 0.5f, 0.5f );
-	m_sprite->setTextureRect( sf::IntRect( 0, 0, 300, 70 ) );
+	m_sprite->setOrigin(0,0);
+	m_sprite->setTextureRect( sf::IntRect( WINDOW_X/2, WINDOW_Y/2, 300, 70 ) );
 	m_mouse = new sf::Mouse();
-	
+    m_posOfPixels =  sf::Vector2i();	
 	
 	//if( sf::Mouse::Left )
 	
@@ -47,6 +48,7 @@ void Button::update(F32 dt)
 {
 	GameObject::update(dt);
 	m_game->setOffSets(this);
+	m_posOfPixels = sf::Mouse::getPosition(*m_gameWindow);
 	
 	
 }
