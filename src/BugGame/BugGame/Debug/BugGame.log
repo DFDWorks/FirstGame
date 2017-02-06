@@ -1,7 +1,39 @@
-﻿Сборка начата 06.02.2017 21:32:57.
+﻿Сборка начата 06.02.2017 21:55:24.
      1>Проект "D:\DFD\TARAKAN\FirstGame\src\BugGame\BugGame\BugGame.vcxproj" в узле 2 (целевые объекты Build).
      1>ClCompile:
-         D:\Progs\VisualStudio\VC\bin\CL.exe /c /I"../../SFML-2.4.1/include" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D SFML_STATIC /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Game.cpp
+         D:\Progs\VisualStudio\VC\bin\CL.exe /c /I"../../SFML-2.4.1/include" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D SFML_STATIC /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt GO_Cockroach.cpp Game.cpp GameHUD.cpp GameObject.cpp Label.cpp TextArea.cpp main.cpp
+         main.cpp
+     1>d:\dfd\tarakan\firstgame\src\buggame\buggame\improvements.h(43): warning C4005: Log: изменение макроопределения
+                 d:\dfd\tarakan\firstgame\src\buggame\buggame\improvements.h(42): см. предыдущее определение "Log"
+     1>d:\dfd\tarakan\firstgame\src\buggame\buggame\gameobject.h(91): warning C4244: =: преобразование "S32" в "F32", возможна потеря данных
+     1>d:\dfd\tarakan\firstgame\src\buggame\buggame\gameobject.h(97): warning C4244: =: преобразование "S32" в "F32", возможна потеря данных
+         TextArea.cpp
+     1>d:\dfd\tarakan\firstgame\src\buggame\buggame\improvements.h(43): warning C4005: Log: изменение макроопределения
+                 d:\dfd\tarakan\firstgame\src\buggame\buggame\improvements.h(42): см. предыдущее определение "Log"
+     1>d:\dfd\tarakan\firstgame\src\buggame\buggame\gameobject.h(91): warning C4244: =: преобразование "S32" в "F32", возможна потеря данных
+     1>d:\dfd\tarakan\firstgame\src\buggame\buggame\gameobject.h(97): warning C4244: =: преобразование "S32" в "F32", возможна потеря данных
+     1>d:\dfd\tarakan\firstgame\src\buggame\buggame\levels.h(25): warning C4244: аргумент: преобразование "const float" в "int", возможна потеря данных
+     1>d:\dfd\tarakan\firstgame\src\buggame\buggame\textarea.cpp(63): warning C4244: аргумент: преобразование "const F32" в "int", возможна потеря данных
+         Label.cpp
+     1>d:\dfd\tarakan\firstgame\src\buggame\buggame\improvements.h(43): warning C4005: Log: изменение макроопределения
+                 d:\dfd\tarakan\firstgame\src\buggame\buggame\improvements.h(42): см. предыдущее определение "Log"
+     1>d:\dfd\tarakan\firstgame\src\buggame\buggame\gameobject.h(91): warning C4244: =: преобразование "S32" в "F32", возможна потеря данных
+     1>d:\dfd\tarakan\firstgame\src\buggame\buggame\gameobject.h(97): warning C4244: =: преобразование "S32" в "F32", возможна потеря данных
+     1>d:\dfd\tarakan\firstgame\src\buggame\buggame\levels.h(25): warning C4244: аргумент: преобразование "const float" в "int", возможна потеря данных
+         GameObject.cpp
+     1>d:\dfd\tarakan\firstgame\src\buggame\buggame\improvements.h(43): warning C4005: Log: изменение макроопределения
+                 d:\dfd\tarakan\firstgame\src\buggame\buggame\improvements.h(42): см. предыдущее определение "Log"
+     1>d:\dfd\tarakan\firstgame\src\buggame\buggame\gameobject.h(91): warning C4244: =: преобразование "S32" в "F32", возможна потеря данных
+     1>d:\dfd\tarakan\firstgame\src\buggame\buggame\gameobject.h(97): warning C4244: =: преобразование "S32" в "F32", возможна потеря данных
+     1>d:\dfd\tarakan\firstgame\src\buggame\buggame\levels.h(25): warning C4244: аргумент: преобразование "const float" в "int", возможна потеря данных
+     1>d:\dfd\tarakan\firstgame\src\buggame\buggame\gameobject.cpp(116): warning C4244: =: преобразование "S32" в "F32", возможна потеря данных
+     1>d:\dfd\tarakan\firstgame\src\buggame\buggame\gameobject.cpp(120): warning C4244: инициализация: преобразование "F32" в "S32", возможна потеря данных
+         GameHUD.cpp
+     1>d:\dfd\tarakan\firstgame\src\buggame\buggame\improvements.h(43): warning C4005: Log: изменение макроопределения
+                 d:\dfd\tarakan\firstgame\src\buggame\buggame\improvements.h(42): см. предыдущее определение "Log"
+     1>d:\dfd\tarakan\firstgame\src\buggame\buggame\gameobject.h(91): warning C4244: =: преобразование "S32" в "F32", возможна потеря данных
+     1>d:\dfd\tarakan\firstgame\src\buggame\buggame\gameobject.h(97): warning C4244: =: преобразование "S32" в "F32", возможна потеря данных
+     1>d:\dfd\tarakan\firstgame\src\buggame\buggame\levels.h(25): warning C4244: аргумент: преобразование "const float" в "int", возможна потеря данных
          Game.cpp
      1>d:\dfd\tarakan\firstgame\src\buggame\buggame\improvements.h(43): warning C4005: Log: изменение макроопределения
                  d:\dfd\tarakan\firstgame\src\buggame\buggame\improvements.h(42): см. предыдущее определение "Log"
@@ -15,6 +47,13 @@
      1>d:\dfd\tarakan\firstgame\src\buggame\buggame\game.cpp(223): warning C4305: инициализация: усечение из "double" к "F32"
      1>d:\dfd\tarakan\firstgame\src\buggame\buggame\game.cpp(289): warning C4060: оператор switch не содержит метку "case" или "default"
      1>d:\dfd\tarakan\firstgame\src\buggame\buggame\game.cpp(345): warning C4244: =: преобразование "double" в "F32", возможна потеря данных
+         GO_Cockroach.cpp
+     1>d:\dfd\tarakan\firstgame\src\buggame\buggame\improvements.h(43): warning C4005: Log: изменение макроопределения
+                 d:\dfd\tarakan\firstgame\src\buggame\buggame\improvements.h(42): см. предыдущее определение "Log"
+     1>d:\dfd\tarakan\firstgame\src\buggame\buggame\gameobject.h(91): warning C4244: =: преобразование "S32" в "F32", возможна потеря данных
+     1>d:\dfd\tarakan\firstgame\src\buggame\buggame\gameobject.h(97): warning C4244: =: преобразование "S32" в "F32", возможна потеря данных
+     1>d:\dfd\tarakan\firstgame\src\buggame\buggame\levels.h(25): warning C4244: аргумент: преобразование "const float" в "int", возможна потеря данных
+         Создание кода...
        Link:
          D:\Progs\VisualStudio\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\DFD\TARAKAN\FirstGame\src\BugGame\Debug\BugGame.exe" /INCREMENTAL /NOLOGO /LIBPATH:"../../SFML-2.4.1/lib" jpeg.lib opengl32.lib winmm.lib "sfml-main-d.lib" "sfml-system-s-d.lib" "sfml-window-s-d.lib" "sfml-graphics-s-d.lib" freetype.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\DFD\TARAKAN\FirstGame\src\BugGame\Debug\BugGame.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\DFD\TARAKAN\FirstGame\src\BugGame\Debug\BugGame.lib" /MACHINE:X86 Debug\Game.obj
          Debug\GameHUD.obj
@@ -29,4 +68,4 @@
 
 Сборка успешно завершена.
 
-Затраченное время: 00:00:00.87
+Затраченное время: 00:00:04.23

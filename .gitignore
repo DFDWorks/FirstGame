@@ -27,3 +27,5 @@
 *.out
 *.app
 *.opensdf
+src/BugGame/BugGame.sdf
+src/BugGame/BugGame/Debug/BugGame.log
