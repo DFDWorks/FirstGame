@@ -9,11 +9,11 @@
 
 ////////////////////////////////////
 // Includes
+
 #include "LibsAndConstants.h"
-#include "GameObject.h"
 #include "Improvements.h"
 #include "Levels.h"
-
+#include "GameObject.h"
 
 ////////////////////////////////////
 GameObject::GameObject()

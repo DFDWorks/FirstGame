@@ -17,6 +17,11 @@ Label::Label()
 }
 
 ////////////////////////////////////
+Label::~Label()
+{
+}
+
+////////////////////////////////////
 LabelPtr Label::Create()
 {
 	CREATE(Label, init());

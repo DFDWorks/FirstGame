@@ -19,6 +19,11 @@ TextArea::TextArea()
 }
 
 ////////////////////////////////////
+TextArea::~TextArea()
+{
+}
+
+////////////////////////////////////
 TextAreaPtr TextArea::Create()
 {
 	CREATE( TextArea, init() );

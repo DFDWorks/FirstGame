@@ -14,9 +14,11 @@
 #include "GameObject.h"
 #include "Levels.h"
 #include "Label.h"
+#include "Dor.h"
 
 ////////////////////////////////////
 PTR( GameHUD );
+PTR( Dor );
 
 namespace Indicators
 {
@@ -61,6 +63,7 @@ protected:
 	F32 m_lifeCoeff;
 	F32 m_manaCoeff;
 	F32 m_staminaCoeff;
+	DorPtr m_dor;
 };
 
 #endif

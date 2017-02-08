@@ -16,7 +16,7 @@
 ////////////////////////////////////
 GameHUD::GameHUD()
 	: m_indicators( Indicators::MAX )
-	, m_lifeCoeff( 0.531f )
+	, m_lifeCoeff( 0.51f )
 	, m_manaCoeff( 1.0f )
 	, m_staminaCoeff( 1.0f )
 {
@@ -35,6 +35,7 @@ bool GameHUD::init()
 
 	Log( "Loading GameHUD...\n" );
 	
+	m_dor = Dor::Create();
 
 	U16 arr[][Indicators::MAX] = {
 									{ 347, 11, 199, 48 },
@@ -61,8 +62,6 @@ bool GameHUD::init()
 		m_indicators[i]->setTextureRect( sf::IntRect(m_indiPos[i-1][0], m_indiPos[i-1][1], m_indiPos[i-1][2], m_indiPos[i-1][3]) );
 	}
 
-	//delete tx;
-
 	m_label = Label::Create( "Level \"Asshole\" " );
 	m_label->setPosition( 20,100 );
 	sf::Texture* hud = new sf::Texture();
@@ -71,9 +70,6 @@ bool GameHUD::init()
 	m_sprite->setPosition( 0, 0 );
 	m_sprite->setScale( 0.5f, 0.5f );
 	m_sprite->setTextureRect( sf::IntRect( 0, 155, 335, 160 ) );
-
-	
-	
 
 	return true;
 }
@@ -99,9 +95,8 @@ void GameHUD::render(sf::RenderWindow* rw)
 	rw->draw( *m_label->operator sf::Text *() );
 	rw->draw( *m_indicators[Indicators::Life] );
 	rw->draw( *m_sprite );
-	//Log( sizeof(m_indicators) );
 	rw->draw( *x->getSprite() );
-	
+	rw->draw( *m_dor->getSprite() );
 	
 	
 }

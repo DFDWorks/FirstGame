@@ -23,3 +23,4 @@ const float kCockroachColumns = 7.8125f;
 const float kCockroachRows = 6.0f;
 
 const sf::IntRect kCockroachImage = sf::IntRect( 0*TILE_SIZE, 0*TILE_SIZE, kCockroachColumns*TILE_SIZE, kCockroachRows*TILE_SIZE );
+const sf::IntRect kDorImage = sf::IntRect( 0*TILE_SIZE, 0*TILE_SIZE, 464, 315 );

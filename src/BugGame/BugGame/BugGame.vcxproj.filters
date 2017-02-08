@@ -31,6 +31,9 @@
     <Filter Include="Файлы ресурсов\2d">
       <UniqueIdentifier>{05fbcad4-6512-40ad-bad7-42738ec33ca5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Файлы ресурсов\Enemies">
+      <UniqueIdentifier>{47638f64-c4ee-4d2c-8b2b-30c3ed8a9fa9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -56,6 +59,9 @@
     </ClCompile>
     <ClCompile Include="TextArea.cpp">
       <Filter>Файлы ресурсов\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="Dor.cpp">
+      <Filter>Файлы ресурсов\Enemies</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -85,6 +91,9 @@
     </ClInclude>
     <ClInclude Include="TextArea.h">
       <Filter>Файлы ресурсов\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="Dor.h">
+      <Filter>Файлы ресурсов\Enemies</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
