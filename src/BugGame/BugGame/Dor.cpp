@@ -55,9 +55,5 @@ void Dor::update( F32 dt )
 ////////////////////////////////////
 void Dor::render( sf::RenderWindow* rw )
 {
-	sf::IntRect texRect;
-	texRect = kDorImage;
-	rw->draw( *m_sprite );
-	setTextureRect( texRect );
 	GameObject::render( rw );
 }

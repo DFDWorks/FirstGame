@@ -14,6 +14,7 @@
 #include "Improvements.h"
 #include "Levels.h"
 #include "GameObject.h"
+#include "SceneTest.h"
 
 ////////////////////////////////////
 GameObject::GameObject()

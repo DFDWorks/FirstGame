@@ -96,7 +96,9 @@ void GameHUD::render(sf::RenderWindow* rw)
 	rw->draw( *m_indicators[Indicators::Life] );
 	rw->draw( *m_sprite );
 	rw->draw( *x->getSprite() );
-	rw->draw( *m_dor->getSprite() );
+	DorPtr xxx = Dor::Create();
+	rw->draw( *xxx->getSprite() );
+	
 	
 	
 }

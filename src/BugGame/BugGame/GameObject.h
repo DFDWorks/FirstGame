@@ -22,8 +22,57 @@ enum GameObjectType
 PTR( Game );
 PTR( GameObject );
 
+template < typename T >
+class SharedObject
+	: public std::enable_shared_from_this< T >
+{
+public:
+
+	////////////////////////////////////
+	// Typedef
+	typedef std::shared_ptr<T> TPtr;
+	typedef std::weak_ptr<T> TWPtr;
+
+public:
+
+	////////////////////////////////////
+       virtual ~SharedObject()
+       {}
+
+	////////////////////////////////////
+	template < class U >
+	inline std::shared_ptr< U > cast()
+	{ 
+		BREAK_IF( !this->shared_from_this() );
+		return STATIC_POINTER_CAST< U >( thisShared() ); 
+	}
+
+	////////////////////////////////////
+	template < class U >
+	inline const U* castPure() const
+	{ 
+		return static_cast< const U* >( this ); 
+	}
+
+	////////////////////////////////////
+	template < class U >
+	inline U* castPure()
+	{ 
+		return static_cast< U* >( this ); 
+	}
+
+protected:
+
+	////////////////////////////////////
+	inline TPtr thisShared()
+	{
+		return this->shared_from_this();
+	}
+
+};
+
 class GameObject
-	: public std::enable_shared_from_this<GameObject>
+	: public SharedObject<GameObject>
 {
 public:
 
@@ -174,3 +223,4 @@ protected:
 	sf::Sprite* m_sprite;
 	
 };
+

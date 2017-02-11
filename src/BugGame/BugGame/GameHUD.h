@@ -47,6 +47,9 @@ public:
 	virtual void render( sf::RenderWindow* rw ) OVERRIDE;
 
 	////////////////////////////////////
+	//inline const LabelPtr& getLabel() const { return m_label; } 
+
+	////////////////////////////////////
 	static GameHUDPtr Create();
 
 private:

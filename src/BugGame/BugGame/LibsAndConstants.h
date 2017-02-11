@@ -37,5 +37,5 @@
 #define MAX_BAR_BUTT 7
 
 #define MAX_MENU_BUTT 4
-
-
+#define BREAK_IF( condition ) if( condition ) { __asm { int 3 } }
+#define STATIC_POINTER_CAST	std::tr1::static_pointer_cast
