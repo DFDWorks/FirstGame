@@ -31,8 +31,9 @@ bool Dor::init()
 {
 	GameObject::init();
 
-	m_width = 100;
-	m_height = 100;
+	m_health = 50;
+	m_width = 10;
+	m_height = 10;
 	m_wCenter = 1;
 	m_hCenter = 1;
 	sf::Texture* tex = new sf::Texture();

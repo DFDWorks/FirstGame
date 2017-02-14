@@ -6,18 +6,22 @@
 // 29.01.17				upd 06.02.17
 ////////////////////////////////////
 
-#pragma once
+#ifndef _Game_h_
+#define _Game_h_
 ////////////////////////////////////
 // Includes
 #include "Improvements.h"
 #include "LibsAndConstants.h"
 #include "GameObject.h"
+//#include "SceneTest.h"
 
 PTR( GameObject );	enum GameObjectType;
 PTR( Label );
 PTR( GameHUD );
 
 PTR( Game );
+PTR( SceneTest );
+
 
 class Game
 	: public std::enable_shared_from_this<Game>
@@ -110,7 +114,8 @@ private:
 
 	GameObjectPtr m_player;
 	GameObjectPtr m_objects[MAX_OBJ];
-	GameHUDPtr m_hud;
+	
+	SceneTestPtr m_test;
 
 	S32 m_diedEnemiesCount;
 
@@ -134,3 +139,5 @@ public:
 
 	S32 getAngleMouseToObject( GameObjectPtr object );
 };
+
+#endif

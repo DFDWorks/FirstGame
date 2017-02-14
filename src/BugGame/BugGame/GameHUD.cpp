@@ -89,16 +89,8 @@ void GameHUD::update( F32 dt )
     
 ////////////////////////////////////
 void GameHUD::render(sf::RenderWindow* rw)
-{
-	TextAreaPtr x = TextArea::Create();
-	GameObject::render(rw);
+{	
 	rw->draw( *m_label->operator sf::Text *() );
 	rw->draw( *m_indicators[Indicators::Life] );
-	rw->draw( *m_sprite );
-	rw->draw( *x->getSprite() );
-	DorPtr xxx = Dor::Create();
-	rw->draw( *xxx->getSprite() );
-	
-	
-	
+	rw->draw( *m_sprite );	
 }

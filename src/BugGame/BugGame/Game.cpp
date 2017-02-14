@@ -13,6 +13,7 @@
 #include "Improvements.h"
 #include "Levels.h"
 #include "GameHUD.h"	
+#include "SceneTest.h"	
 #include "GO_Cockroach.h"	
 
 sf::Texture* TextureAtlas;
@@ -39,8 +40,7 @@ bool Game::init()
 	m_isMenuActive = true;
 
 	m_player = NULL;
-	
-	m_hud = NULL;
+	m_test = NULL;
 	for ( S32 i = 0; i < MAX_OBJ; i++ )
 		m_objects[i] = NULL;
 
@@ -58,7 +58,7 @@ bool Game::init()
 ////////////////////////////////////
 void Game::setupSystem()
 {
-	srand( time( 0 ) );
+	srand( time( static_cast< __int64 >( 0 ) ) );
 
 	m_renderWindow = new sf::RenderWindow( 
 		sf::VideoMode( WINDOW_X, WINDOW_Y, 32 ),
@@ -86,6 +86,8 @@ void Game::initialize()
 
 			switch ( cellSymbol )
 			{
+				default:
+				break;
 			}
 
 		}
@@ -98,15 +100,16 @@ void Game::initialize()
 
 			switch ( cellSymbol )
 			{
+				default:
+				break;
 			}
 		}
 	}
 	m_player = Cockroach::Create();
 	m_player->setGame( shared_from_this() );
 
-	m_hud = GameHUD::Create();
-	m_hud->setGame( shared_from_this() );
-	
+	m_test = SceneTest::Create();
+	m_test->setGame( shared_from_this() );
 }
 
 ////////////////////////////////////
@@ -142,7 +145,7 @@ bool Game::loop()
 		m_clockFpsUpdate = 1.0;
 	}
 
-	S32 ping = 25 - deltaTime * 1000;
+	S32 ping = ( S32 ) ( 25.0f - deltaTime * 1000.0f );
 	if ( ping < 0 ) ping = 0;
 	//	Sleep(  ping  );
 
@@ -176,8 +179,8 @@ void Game::render()
 			m_objects[i]->render( m_renderWindow );
 			m_btn_obj++;
 		}
-	m_hud->render( m_renderWindow );
-
+	m_test->render( m_renderWindow );
+	
 	m_player->render( m_renderWindow );
 	
 	
@@ -211,16 +214,16 @@ void Game::update( F32 dt )
 		if ( m_player && m_player->getHealth() <= 0 )
 			initialize();
 	}
-
+	m_test->update( dt );
 	m_player->update( dt );
-	m_hud->update( dt );
+	
 	
 }
 
 ////////////////////////////////////
 GameObjectPtr Game::checkIntersects( F32 x, F32 y, F32 width, F32 height, GameObjectPtr exceptObject )
 {
-	F32 passing = 1.4;
+	F32 passing = 1.4f;
 
 	F32 x0 = x;
 	F32 y0 = y;
@@ -286,6 +289,8 @@ GameObjectPtr Game::createObject( GameObjectType type, F32 x, F32 y )
 
 			switch ( type )
 			{
+				default:
+				break;
 			}
 
 			if ( object == NULL )
@@ -342,7 +347,7 @@ void Game::setOffSets( GameObjectPtr object )
 //	if ( object->getX() > WINDOW_X / 2 / TILE_SIZE && object->getX() < COLUMNS - WINDOW_X / 2 / TILE_SIZE - 1.5 )
 		m_offSetX = object->getX() - WINDOW_X / 2 / TILE_SIZE;
 //	if ( object->getY() > WINDOW_Y / 2 / TILE_SIZE && object->getY() < ROWS - WINDOW_Y / 2 / TILE_SIZE - 1.5 )
-		m_offSetY = object->getY() - WINDOW_Y / 2 / TILE_SIZE - 1.0;
+		m_offSetY = object->getY() - WINDOW_Y / 2.0f / TILE_SIZE - 1.0f;
 }
 
 ////////////////////////////////////

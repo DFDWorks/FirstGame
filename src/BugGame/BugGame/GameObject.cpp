@@ -14,7 +14,6 @@
 #include "Improvements.h"
 #include "Levels.h"
 #include "GameObject.h"
-#include "SceneTest.h"
 
 ////////////////////////////////////
 GameObject::GameObject()
@@ -118,7 +117,7 @@ bool GameObject::rotation( F32 deltaTime )
 		return false;
 	}
 
-	S32 difference = m_directionFormally - m_directionReal;
+	S32 difference = ( S32 ) ( ( F32 )m_directionFormally - m_directionReal );
 	if( difference == 0 )
 	{
 		m_sideOfRotation = 1;

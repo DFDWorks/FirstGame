@@ -95,7 +95,10 @@ public:
 	GameObjectType getType(){ return m_type; }
 
 	////////////////////////////////////
-	void setGame( GamePtr game ){ m_game = game; }
+	void setGame( const GamePtr& game ){ m_game = game; }
+
+	////////////////////////////////////
+	inline const GamePtr& getGame() const { return m_game; }
 
 	////////////////////////////////////
 	void setSprite( sf::Sprite* spr ){ m_sprite = spr; }
@@ -137,13 +140,13 @@ public:
 	F32 getHeight(){ return m_height; }
 
 	////////////////////////////////////
-	void setWCenter( S32 center ){ m_wCenter = center; }
+	void setWCenter( F32 center ){ m_wCenter = center; }
 
 	////////////////////////////////////
 	F32 getWCenter(){ return m_wCenter; }
 
 	////////////////////////////////////
-	void setHCenter( S32 center ){ m_hCenter = center; }
+	void setHCenter( F32 center ){ m_hCenter = center; }
 
 	////////////////////////////////////
 	F32 getHCenter(){ return m_hCenter; }
@@ -180,6 +183,12 @@ public:
 
 	////////////////////////////////////
 	inline const sf::Sprite* getSprite() const { return m_sprite; }
+
+	////////////////////////////////////
+	void setScale( const F32& x, const F32& y ) const { m_sprite->setScale( x, y ); }
+
+	////////////////////////////////////
+	void setPosition( const F32& x, const F32& y ) const { m_sprite->setPosition( x, y ); }
 
 	////////////////////////////////////
 	void setDirectionDegree( S32 directionDegree ){ m_directionFormally = directionDegree; }

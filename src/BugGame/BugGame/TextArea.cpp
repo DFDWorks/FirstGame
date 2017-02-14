@@ -11,6 +11,7 @@
 
 #include "Improvements.h"
 #include "TextArea.h"
+#include "Label.h"
 
 using namespace sf;
 ////////////////////////////////////
@@ -24,22 +25,27 @@ TextArea::~TextArea()
 }
 
 ////////////////////////////////////
-TextAreaPtr TextArea::Create()
+TextAreaPtr TextArea::Create( const F32& x, const F32& y, std::string str )
 {
-	CREATE( TextArea, init() );
+	CREATE( TextArea, init( x, y, str ) );
 }
 
 ////////////////////////////////////
-bool TextArea::init()
+bool TextArea::init( const F32& x, const F32& y, std::string str )
 {
 	GameObject::init();						//TRiOLD:	Call of the designer of the base class
 
 	Log( "Loading TextArea...\n" );
+
+	m_label = Label::Create( str );
+	
+
 	sf::Texture* area = new sf::Texture();
 	area->loadFromFile( "speak_areas01.png" );
 	m_sprite->setTexture( *area );
 	
-	m_sprite->setPosition( WINDOW_X/2, WINDOW_Y/2 );
+	m_sprite->setPosition( x, y );
+	m_label->setPosition( m_sprite->getPosition().x + 20, m_sprite->getPosition().y + 20 );
 	m_sprite->setTextureRect( sf::IntRect( 0, 0, 147, 96 ) );
 	
 
@@ -57,7 +63,8 @@ void TextArea::update( F32 dt )
 ////////////////////////////////////
 void TextArea::render( sf::RenderWindow* rw )
 {
-	GameObject::render( rw );
+	rw->draw( *m_sprite );
+	rw->draw( *m_label->getText() );
 }
 
 

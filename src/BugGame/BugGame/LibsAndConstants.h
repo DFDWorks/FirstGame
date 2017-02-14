@@ -24,7 +24,7 @@
 
 #define MAX_OBJ 1024
 
-#define TILE_SIZE 64
+#define TILE_SIZE 32.0f
 
 #define ROWS 30
 #define COLUMNS 52

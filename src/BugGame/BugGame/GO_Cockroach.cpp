@@ -54,11 +54,11 @@ void Cockroach::update( F32 dt )
 ////////////////////////////////////
 void Cockroach::render( sf::RenderWindow* rw )
 {
-	sf::IntRect texRect;
+	//sf::IntRect texRect;
 		
-	texRect = kCockroachImage;
-	m_sprite->setRotation( m_directionReal );
-	rw->draw( *m_sprite );
-	setTextureRect( texRect );
+	//texRect = kCockroachImage;
+	//m_sprite->setRotation( m_directionReal );
+	//rw->draw( *m_sprite );
+	//setTextureRect( texRect );
 	GameObject::render( rw );
 }

@@ -35,7 +35,7 @@ public:
 	virtual void render( sf::RenderWindow* rw ) OVERRIDE;
 
 	////////////////////////////////////
-	static TextAreaPtr Create();
+	static TextAreaPtr Create( const F32& x = 0, const F32& y = 0, std::string str = "" );
 
 	////////////////////////////////////
 	void setPosition( const F32& x, const F32& y ) { m_sprite->setPosition( x, y ); };
@@ -49,9 +49,10 @@ public:
 private:
 
 	////////////////////////////////////
-	bool init();
+	bool init( const F32& x, const F32& y, std::string str );
 
 protected:
+	LabelPtr m_label;
 
 };
 
