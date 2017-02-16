@@ -9,7 +9,7 @@
 ////////////////////////////////////
 // Includes
 #include "SceneTest.h"
-
+#include "Action2D_sinMovement.h"
 
 ////////////////////////////////////
 SceneTest::SceneTest()

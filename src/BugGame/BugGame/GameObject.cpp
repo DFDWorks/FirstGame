@@ -15,6 +15,7 @@
 #include "Levels.h"
 #include "GameObject.h"
 
+
 ////////////////////////////////////
 GameObject::GameObject()
 {
@@ -145,3 +146,13 @@ bool GameObject::rotation( F32 deltaTime )
 	//printf("%i, %f, %i, %f\n",m_directionFormally, m_directionReal, difference, deltaAngle);
 	return true;
 }
+
+////////////////////////////////////
+//void GameObject::runAction( const GameObjectPtr& object, const Action2DPtr& action )
+//{
+//	
+//	if( std::find( m_actions.begin(), m_actions.end(), action ) == m_actions.end() )
+//		m_actions.push_back( action );
+//
+//	action->setTarget( object );
+//}

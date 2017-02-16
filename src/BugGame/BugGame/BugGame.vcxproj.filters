@@ -69,6 +69,15 @@
     <ClCompile Include="SceneTest.cpp">
       <Filter>Файлы ресурсов\Scenes</Filter>
     </ClCompile>
+    <ClCompile Include="Action2D.cpp">
+      <Filter>Файлы ресурсов\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="Action2D_sinMovement.cpp">
+      <Filter>Файлы ресурсов\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="TimeAction2D.cpp">
+      <Filter>Файлы ресурсов\2d</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h">
@@ -103,6 +112,15 @@
     </ClInclude>
     <ClInclude Include="SceneTest.h">
       <Filter>Файлы ресурсов\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="Action2D.h">
+      <Filter>Файлы ресурсов\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="Action2D_sinMovement.h">
+      <Filter>Файлы ресурсов\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="TimeAction2D.h">
+      <Filter>Файлы ресурсов\2d</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

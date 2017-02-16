@@ -11,6 +11,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Action2D.cpp" />
+    <ClCompile Include="Action2D_sinMovement.cpp" />
     <ClCompile Include="Dor.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="GameHUD.cpp" />
@@ -21,8 +23,11 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="SceneTest.cpp" />
     <ClCompile Include="TextArea.cpp" />
+    <ClCompile Include="TimeAction2D.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Action2D.h" />
+    <ClInclude Include="Action2D_sinMovement.h" />
     <ClInclude Include="Dor.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameHUD.h" />
@@ -34,6 +39,7 @@
     <ClInclude Include="LibsAndConstants.h" />
     <ClInclude Include="SceneTest.h" />
     <ClInclude Include="TextArea.h" />
+    <ClInclude Include="TimeAction2D.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{8C430F0A-8D9E-4125-BEB8-69FCF5110F07}</ProjectGuid>

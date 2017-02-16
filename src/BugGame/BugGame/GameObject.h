@@ -9,6 +9,8 @@
 
 ////////////////////////////////////
 // Includes
+
+//#include "Action2D.h"
 #include "Game.h"
 
 ////////////////////////////////////
@@ -21,6 +23,7 @@ enum GameObjectType
 
 PTR( Game );
 PTR( GameObject );
+
 
 template < typename T >
 class SharedObject
@@ -200,6 +203,9 @@ public:
 	bool rotation( F32 deltaTime );
 
 	////////////////////////////////////
+	//void runAction( const GameObjectPtr& object, const Action2DPtr& action );
+
+	////////////////////////////////////
 protected:
 
 	bool init();
@@ -230,6 +236,9 @@ protected:
 	S32 m_sideOfRotation;			// 1 - clockwise, -1 - anticlockwise
 
 	sf::Sprite* m_sprite;
+
+	// Actions
+	//std::vector< Action2DPtr > m_actions;
 	
 };
 

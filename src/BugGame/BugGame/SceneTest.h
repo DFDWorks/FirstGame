@@ -14,6 +14,7 @@
 #include "GO_Cockroach.h"
 #include "GameHUD.h"
 #include "TextArea.h"
+#include "Action2D_sinMovement.h"
 
 
 ////////////////////////////////////
@@ -50,6 +51,7 @@ protected:
 	DorPtr m_dor;
 	sf::RectangleShape* m_rectangle; //for map rendering
 	sf::Texture* m_block;
+	//Action2D_sinMovementPtr m_move;
 };
 
 #endif
